@@ -49,8 +49,8 @@ body{
 
 .contenu {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 70% 10% 5% 15%;
   gap: 0px 0px;
 }
 
@@ -66,8 +66,17 @@ h2 {
 .temperature {
    grid-area: 3 / 1 / 4 / 3;
  }
-.prix {
+.contenu > a {
   grid-area: 4 / 1 / 5 / 3;
-  position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  background: #2196f3;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 5px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
  }
