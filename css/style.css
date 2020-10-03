@@ -13,14 +13,14 @@ body{
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 900px;
+  max-width: 1600px;
   margin: 40px 0;
 }
 
 .voyage{
   position: relative;
-  min-width: 275px;
-  height: 400px;
+  min-width: 300px;
+  height: 440px;
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2);
   box-shadow: inset -5px -5px -5px rgba(255, 255, 255, 0.1);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
@@ -40,6 +40,17 @@ body{
   border-radius: 15px;
   box-shadow: 0 20px 50px rgba(0,0,0,0.5);
   transition: 0.5s;
+  overflow: hidden;
+}
+
+.boite::before{
+  position: absolute;
+  content: '';
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .boite:hover{
@@ -50,22 +61,41 @@ body{
 .contenu {
   display: grid;
   grid-template-columns: 20% 80%;
-  grid-template-rows: 70% 10% 5% 15%;
+  grid-template-rows: 280px 26px 20px 74px;
   gap: 0px 0px;
 }
 
 .photo {
   grid-area: 1 / 1 / 2 / 3;
 }
+
+.photo > img{
+  height: 280px;
+}
+
 .drapeau {
   grid-area: 2 / 1 / 3 / 2;
+  height: 15px;
+  margin-top: 7px;
+  margin-left: 5px;
+  margin-right: 5px;
  }
+
 h2 {
   grid-area: 2 / 2 / 3 / 3;
+  margin: 0px;
+  margin-left: -15px;
+  text-align: left;
+  font-stretch: semi-condensed;
+  font-size: 24px;
  }
+
 .temperature {
    grid-area: 3 / 1 / 4 / 3;
+   margin-left: 5px;
+   margin-top: 2px;
  }
+
 .contenu > a {
   grid-area: 4 / 1 / 5 / 3;
   display: flex;
@@ -77,6 +107,7 @@ h2 {
   padding: 5px;
   border-radius: 20px;
   text-decoration: none;
+  font-size: 14px;
   font-weight: 500;
   color: #fff;
  }
