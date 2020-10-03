@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang= "fr">
+    <head>
+        <meta charset = "UFT-8">
+        <title>accueil</title>
+    </head>
+    <body> <!--va se voir-->
+        <header> <!--Haut de page , création du gros de la page, on intègre la navigation au menu-->
+            <nav>
+                <a href = "./Accueil.html">   <!--création du navigateur-->
+                    Accueil
+                </a>
+                <a href = "./Panier.html">
+                    Panier
+                </a>
+                <a href = "./Contact.html">
+                    Contact
+                </a>
+                <a href="">Identification</a>
+            </nav>
+            <form action="PagePrincipale.html">
+                <div class ="identification">
+                    <label for="identification">identifiez vous :</label>
+                    <input type="email">
+                </div>
+                <div>
+                    <label for="Mpasse">Mot de passe (5 caractères minimum ) : </label>
+                    <input type="MotPasse" id="pass" name="Mot passe" minlength="5" required>
+                </div>
+            </form>
+        </header>
+        <hr>
+
+        <article class = ""> 
+            <div class="Voyage"> <!--Séparation sémentique , ne se verra pas mais est présente-->
+                <img src="" alt="PhotoDestination1"> <!--insertion photo-->
+                <h2>Voyage 1 </h2> <!--titre-->
+                <p>à partir de : 130$</p>
+            </div>
+
+            <div class="Voyage">
+            <img src="" alt="PhotoDestination2">
+            <h2>Voyage 2 </h2>
+            <p>à partir de : 90$</p>
+            </div>
+
+            <div class="Voyage">
+                <img src="" alt="PhotoDestination3">
+            <h2>Voyage 3 </h2>
+            <p>à partir de : 100$</p>
+            </div>
+
+        </article>
+        
+
+        <article class = "">
+            <form action="PagePrincipale.html">
+                <h2>Filtre </h2>
+            
+                <div class = "Continents">
+                    <label for = "Continents"> choisissez votre continent : </label>
+                    <select class = "Continents">
+                        <option value = "TousContinents">-</option>
+                        <option value = "Afrique">Afrique</option>
+                        <option value = "AmeriqueNord">Amerique du Nord</option>
+                        <option value = "AmeriqueSud">Amerique du Sud</option>
+                        <option value = "Asie">Asie</option>
+                        <option value = "Europe">Europe</option>
+                        <option value = "Oceanie">Océanie</option>  
+                    </select>
+                </div> 
+            
+                <div class = "prix min">
+                
+                    <label for ="PrixMin">prix minimum : </label>
+                    <input type="number" name="PrixMin" min="0" step="100">
+                  
+                </div> 
+
+                <div class = "prix max">
+                  
+                      <label for ="PrixMax"> prix maximum : </label>
+                      <input type="number" name="PrixMax" min="0" step="100">
+                   
+                </div> 
+                <div class = "prix max">
+                
+                    <button type="reset">Rénitialiser</button>
+                  
+                </div> 
+            </form>  
+
+        </article>
+        <hr>
+
+        <footer> <!--bas de page-->
+            <p>
+            
+              <a href ="./Contact.html"> 
+                contact 
+              </a>
+            </p>
+
+        </footer>
+
+    </body>
+</html>
