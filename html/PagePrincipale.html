@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang= "fr">
     <head>
+        <link rel="stylesheet" href="../css/style.css">
         <meta charset = "UFT-8">
         <title>accueil</title>
     </head>
@@ -31,73 +32,68 @@
         </header>
         <hr>
 
-        <article class = ""> 
-            <div class="Voyage"> <!--Séparation sémentique , ne se verra pas mais est présente-->
-                <img src="" alt="PhotoDestination1"> <!--insertion photo-->
+        <article class="sectionArticle">
+          <div class="voyage">
+            <div class="boite"> <!--Séparation sémentique , ne se verra pas mais est présente-->
+              <div class="contenu">
+                <img src="" alt="photoDestination"> <!--insertion photo-->
+                <img src="" alt="drapeauPays">
                 <h2>Voyage 1 </h2> <!--titre-->
-                <p>à partir de : 130$</p>
+                <p class="prix">à partir de : 130$</p>
+                <p class="temperature">30°C</p>
+              </div>
             </div>
+          </div>
 
-            <div class="Voyage">
-            <img src="" alt="PhotoDestination2">
-            <h2>Voyage 2 </h2>
-            <p>à partir de : 90$</p>
-            </div>
-
-            <div class="Voyage">
-                <img src="" alt="PhotoDestination3">
-            <h2>Voyage 3 </h2>
-            <p>à partir de : 100$</p>
-            </div>
 
         </article>
-        
 
-        <article class = "">
+
+        <section class="trie">
             <form action="PagePrincipale.html">
                 <h2>Filtre </h2>
-            
-                <div class = "Continents">
-                    <label for = "Continents"> choisissez votre continent : </label>
-                    <select class = "Continents">
-                        <option value = "TousContinents">-</option>
-                        <option value = "Afrique">Afrique</option>
-                        <option value = "AmeriqueNord">Amerique du Nord</option>
-                        <option value = "AmeriqueSud">Amerique du Sud</option>
-                        <option value = "Asie">Asie</option>
-                        <option value = "Europe">Europe</option>
-                        <option value = "Oceanie">Océanie</option>  
-                    </select>
-                </div> 
-            
-                <div class = "prix min">
-                
-                    <label for ="PrixMin">prix minimum : </label>
-                    <input type="number" name="PrixMin" min="0" step="100">
-                  
-                </div> 
 
-                <div class = "prix max">
-                  
-                      <label for ="PrixMax"> prix maximum : </label>
-                      <input type="number" name="PrixMax" min="0" step="100">
-                   
-                </div> 
-                <div class = "prix max">
-                
+                <div class = "continents">
+                    <label for = "continents"> choisissez votre continent : </label>
+                    <select class = "continents">
+                        <option value = "tousContinents">-</option>
+                        <option value = "afrique">Afrique</option>
+                        <option value = "ameriqueNord">Amerique du Nord</option>
+                        <option value = "ameriqueSud">Amerique du Sud</option>
+                        <option value = "asie">Asie</option>
+                        <option value = "europe">Europe</option>
+                        <option value = "oceanie">Océanie</option>
+                    </select>
+                </div>
+
+                <div class = "prixMin">
+
+                    <label for ="prixMin">prix minimum : </label>
+                    <input type="number" name="prixMin" min="0" step="100">
+
+                </div>
+
+                <div class = "prixMax">
+
+                      <label for ="prixMax"> prix maximum : </label>
+                      <input type="number" name="prixMax" min="0" step="100">
+
+                </div>
+                <div class = "prixMax">
+
                     <button type="reset">Rénitialiser</button>
-                  
-                </div> 
-            </form>  
+
+                </div>
+            </form>
 
         </article>
         <hr>
 
         <footer> <!--bas de page-->
             <p>
-            
-              <a href ="./Contact.html"> 
-                contact 
+
+              <a href ="./contact.html">
+                contact
               </a>
             </p>
 
