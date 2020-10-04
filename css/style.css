@@ -53,14 +53,27 @@ nav > a:hover{
 /**/
 /**/
 /*GESTION DE L'AFFICHAGE DU POP-UP POUR SE LOGIN*/
+.loginContainer > h2{
+  color : #fff;
+  margin-bottom: 7px;
+}
+
+.loginContainer > label{
+  color: #fff;
+  font-stretch: extra-expanded;
+}
+
+/*Button du nav qui n'a pas explicitement de lien, on fait croire au curseur qu'il en a*/
 .loginButton{
   cursor: pointer;
 }
 
+/*Conteneur du pop-up*/
 .loginContainer{
+  border-radius: 20px;
   max-width: 300px;
   padding: 10px;
-  background-color: white;
+  background-color: #232427;
 }
 
 .loginContainer > input{
@@ -90,7 +103,7 @@ nav > a:hover{
 .loginContainer .button {
   font-weight: bold;
   border-radius: 50px;
-  background: linear-gradient(145deg, #1e87db, #23a1ff);
+  background: #2196f3;
   color: white;
   padding: 16px 20px;
   border: none;
@@ -100,8 +113,16 @@ nav > a:hover{
   opacity: 0.8;
 }
 
+.loginContainer > .button:hover{
+  content: "";
+  background: rgba(97, 180, 255, 1);
+  height: 100%;
+  width: 100%;
+}
+
 .loginContainer .buttonCancel {
-  background-color: red;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #28292b, #2f3033);
   color: white;
   padding: 16px 20px;
   border: none;
