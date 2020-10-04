@@ -11,6 +11,13 @@ body{
   background-image: url("../data/destination/background2.jpg");
   width: 100%;
 }
+
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
 /* GESTION DE L'AFFICHAGE DU HEADER*/
 header{
   background: #232427;
@@ -38,6 +45,13 @@ nav > a:hover{
   transition: 0.5;
   text-shadow: 0px 0px rgba(255, 255, 255, 1);
 }
+
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
 /*GESTION DE L'AFFICHAGE DU POP-UP POUR SE LOGIN*/
 .loginButton{
   cursor: pointer;
@@ -49,19 +63,34 @@ nav > a:hover{
   background-color: white;
 }
 
+.loginContainer > input{
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  border-radius: 50px;
+  background: #232427;
+  box-shadow: inset 20px 20px 60px #1e1f21,
+            inset -20px -20px 60px #28292d;
+}
+
 .popUpLogin {
   margin-top: 50px;
   display: none;
   position: fixed;
   top: 0;
   right: 15px;
-  border: 3px solid #f1f1f1;
   z-index: 9;
   background: #fff;
 }
 
+/*Button Login*/
 .loginContainer .button {
-  background-color: #4CAF50;
+  font-weight: bold;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #1e87db, #23a1ff);
   color: white;
   padding: 16px 20px;
   border: none;
@@ -99,9 +128,15 @@ header > form input[type=email], header > form input[type=password] {
 header > form input[type=email]:focus, header > form input[type=password]:focus {
   background-color: #ddd;
   outline: none;
+  border: none;
 }
-
-/*GESTION DES AFFICHAGES DES VOYAGES*/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/*GESTION DE L'AFFICHAGE DES VOYAGES*/
 .blockPrincipal{
   margin-left: auto;
   margin-right: auto;
