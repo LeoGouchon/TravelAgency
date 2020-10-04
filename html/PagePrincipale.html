@@ -8,13 +8,13 @@
     <body> <!--va se voir-->
         <header> <!--Haut de page , création du gros de la page, on intègre la navigation au menu-->
             <nav>
-                <a href = "./Accueil.html">   <!--création du navigateur-->
+                <a href = "./accueil.html">   <!--création du navigateur-->
                     Accueil
                 </a>
-                <a href = "./Panier.html">
+                <a href = "./panier.html">
                     Panier
                 </a>
-                <a href = "./Contact.html">
+                <a href = "./contact.html">
                     Contact
                 </a>
                 <a href="">Identification</a>
@@ -30,66 +30,79 @@
                 </div>
             </form>
         </header>
-        <hr>
 
-        <article class="sectionArticle">
-          <div class="voyage">
-            <div class="boite"> <!--Séparation sémentique , ne se verra pas mais est présente-->
-              <div class="contenu">
-                <div class="photo">
-                  <img src="../data/destination/monza/monzaVille.jpg" alt="photoDestination">
+        <section class="blockPrincipal">
+          <section class="trie">
+              <form action="PagePrincipale.html">
+                  <h2>Filtre </h2
+                  <div class = "continents">
+                      <label for = "continents"> choisissez votre continent : </label>
+                      <select class = "continents">
+                          <option value = "tousContinents">-</option>
+                          <option value = "afrique">Afrique</option>
+                          <option value = "ameriqueNord">Amerique du Nord</option>
+                          <option value = "ameriqueSud">Amerique du Sud</option>
+                          <option value = "asie">Asie</option>
+                          <option value = "europe">Europe</option>
+                          <option value = "oceanie">Océanie</option>
+                      </select>
+                  </div>
+                  <div class = "prixMin">
+                      <label for ="prixMin">prix minimum : </label>
+                      <input type="number" name="prixMin" min="0" step="100">
+                  </div>
+                  <div class = "prixMax">
+                        <label for ="prixMax"> prix maximum : </label>
+                        <input type="number" name="prixMax" min="0" step="100">
+                  </div>
+                  <div class = "prixMax">
+                      <button type="reset">Rénitialiser</button>
+                  </div>
+              </form>
+
+          </section>
+          <article class="sectionArticle">
+            <div class="voyage">
+              <div class="boite"> <!--Séparation sémentique , ne se verra pas mais est présente-->
+                <div class="contenu">
+                  <div class="photo">
+                    <img src="../data/destination/monza/monzaVille.jpg" alt="photoDestination">
+                  </div>
+                  <img class="drapeau" src="../data/destination/italieDrapeau.jpg" alt="drapeauPays">
+                  <h2>Voyage 1 </h2> <!--titre-->
+                  <a href="./reservation.html">à partir de 130$</a>
+                  <p class="temperature">30°C</p>
                 </div>
-                <img class="drapeau" src="../data/destination/italieDrapeau.jpg" alt="drapeauPays">
-                <h2>Voyage 1 </h2> <!--titre-->
-                <a href="./reservation.html">à partir de 130$</a>
-                <p class="temperature">30°C</p>
               </div>
             </div>
-          </div>
-
-
-        </article>
-
-
-        <section class="trie">
-            <form action="PagePrincipale.html">
-                <h2>Filtre </h2>
-
-                <div class = "continents">
-                    <label for = "continents"> choisissez votre continent : </label>
-                    <select class = "continents">
-                        <option value = "tousContinents">-</option>
-                        <option value = "afrique">Afrique</option>
-                        <option value = "ameriqueNord">Amerique du Nord</option>
-                        <option value = "ameriqueSud">Amerique du Sud</option>
-                        <option value = "asie">Asie</option>
-                        <option value = "europe">Europe</option>
-                        <option value = "oceanie">Océanie</option>
-                    </select>
+            <div class="voyage">
+              <div class="boite"> <!--Séparation sémentique , ne se verra pas mais est présente-->
+                <div class="contenu">
+                  <div class="photo">
+                    <img src="../data/destination/monza/monzaVille.jpg" alt="photoDestination">
+                  </div>
+                  <img class="drapeau" src="../data/destination/italieDrapeau.jpg" alt="drapeauPays">
+                  <h2>Voyage 1 </h2> <!--titre-->
+                  <a href="./reservation.html">à partir de 130$</a>
+                  <p class="temperature">30°C</p>
                 </div>
-
-                <div class = "prixMin">
-
-                    <label for ="prixMin">prix minimum : </label>
-                    <input type="number" name="prixMin" min="0" step="100">
-
+              </div>
+            </div>  <div class="voyage">
+                <div class="boite"> <!--Séparation sémentique , ne se verra pas mais est présente-->
+                  <div class="contenu">
+                    <div class="photo">
+                      <img src="../data/destination/monza/monzaVille.jpg" alt="photoDestination">
+                    </div>
+                    <img class="drapeau" src="../data/destination/italieDrapeau.jpg" alt="drapeauPays">
+                    <h2>Voyage 1 </h2> <!--titre-->
+                    <a href="./reservation.html">à partir de 130$</a>
+                    <p class="temperature">30°C</p>
+                  </div>
                 </div>
+              </div>
+          </article>
+        </section>
 
-                <div class = "prixMax">
-
-                      <label for ="prixMax"> prix maximum : </label>
-                      <input type="number" name="prixMax" min="0" step="100">
-
-                </div>
-                <div class = "prixMax">
-
-                    <button type="reset">Rénitialiser</button>
-
-                </div>
-            </form>
-
-        </article>
-        <hr>
 
         <footer> <!--bas de page-->
             <p>
