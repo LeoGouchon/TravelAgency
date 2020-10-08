@@ -9,7 +9,11 @@
 
 body{
   background-image: url("../data/destination/background2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-attachment: fixed;
   width: 100%;
+
 }
 
 /**/
@@ -23,7 +27,7 @@ header{
   background: #232427;
   border-radius: 20px;
   margin-bottom: 10px;
-  max-width: 1600px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -100,7 +104,7 @@ nav > a:hover{
 }
 
 /*Button Login*/
-.loginContainer .button {
+.loginContainer > .button {
   font-weight: bold;
   border-radius: 50px;
   background: #2196f3;
@@ -161,7 +165,7 @@ header > form input[type=email]:focus, header > form input[type=password]:focus 
 .blockPrincipal{
   margin-left: auto;
   margin-right: auto;
-  max-width: 1600px;
+  max-width: 1200Px;
   background: #232427;
   border-radius: 20px;
   padding: 20px;
@@ -271,4 +275,20 @@ header > form input[type=email]:focus, header > form input[type=password]:focus 
   font-size: 14px;
   font-weight: 500;
   color: #fff;
+ }
+
+ /**/
+ /**/
+ /**/
+ /**/
+ /**/
+ /**/
+ /*GESTION DE L'AFFICHAGE DU FOOTER*/
+ footer{
+   background: #232427;
+   border-radius: 20px;
+   margin: 10px 0px;
+   max-width: 1200px;
+   margin-left: auto;
+   margin-right: auto;
  }

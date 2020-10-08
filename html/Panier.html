@@ -2,20 +2,36 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Mon Panier</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="./PagePrincipal.html">Acceuil</a>
-        <a href="./Panier.html">Panier</a>
-        <a href="./Contact.html">Contact</a>
-        <a href="">Se connecter</a>
-      </nav>
-      <img src="" alt="PhotoDestination"> <!-- en css,flouter l'image en bg -->
-      <hr>
+    <header> <!--Haut de page , création du gros de la page, on intègre la navigation au menu-->
+        <nav>
+            <a href = "./pagePrincipale.html">  <!--création du navigateur-->
+                Accueil
+            </a>
+            <a href = "./panier.html">
+                Panier
+            </a>
+            <a href = "./contact.html">
+                Contact
+            </a>
+            <a onclick="openCloseForm()" class="loginButton">Se connecter</a>
+        </nav>
+        <div class="popUpLogin" id="login">
+          <form action="PagePrincipale.html" class="loginContainer">
+              <h2>Se connecter</h2>
+              <label for="entrerEmail">Email</label>
+              <input type="email" name="email" placeholder="Entrer votre email">
+              <label for="password">Mot de passe</label>
+              <input type="password" name="password" minlength="5" required placeholder="Entrer votre mot de passe">
+              <button type="submit" class="button">Login</button>
+              <button type="submit" class="buttonCancel" onclick="closeForm()">Fermer</button>
+          </form>
+        </div>
     </header>
-    <article class="">
+    <article class="blockPrincipal">
       <h1>Mon Panier</h1>
       <div class="voyage">
         <img src="" alt="PhotoDestination">
@@ -59,7 +75,6 @@
       <h3>Prix Total : 5782€</h3>
     </article>
     <footer>
-      <hr>
       <a href="./Contact.html">Contact</a>
     </footer>
   </body>
