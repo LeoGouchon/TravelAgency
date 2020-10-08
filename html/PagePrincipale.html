@@ -35,10 +35,10 @@
 
         <section class="blockPrincipal">
           <section class="trie">
-              <form action="PagePrincipale.html">
-                  <h2>Filtre </h2>
+              <h2>Filtre </h2>
+              <form class="formTrie" action="PagePrincipale.html">
                   <div class = "continents">
-                      <label for = "continents"> choisissez votre continent : </label>
+                      <label for = "continents">Continent </label>
                       <select class = "continents">
                           <option value = "tousContinents">-</option>
                           <option value = "afrique">Afrique</option>
@@ -49,15 +49,12 @@
                           <option value = "oceanie">Océanie</option>
                       </select>
                   </div>
-                  <div class = "prixMin">
-                      <label for ="prixMin">prix minimum : </label>
-                      <input type="number" name="prixMin" min="0" step="100">
+                  <div class="prixMinMax">
+                    <span class="doubleRange"></span>
+                    <input class="range" value="500" min="300" max="10000" step="100" type="range">
+                    <input class="range" value="50000" min="300" max="10000" step="100" type="range">
                   </div>
-                  <div class = "prixMax">
-                        <label for ="prixMax"> prix maximum : </label>
-                        <input type="number" name="prixMax" min="0" step="100">
-                  </div>
-                  <div class = "prixMax">
+                  <div class = "reset">
                       <button type="reset">Rénitialiser</button>
                   </div>
               </form>
@@ -157,8 +154,6 @@
             </div>
           </article>
         </section>
-
-
         <footer> <!--bas de page-->
             <p>
               <a href ="./contact.html">

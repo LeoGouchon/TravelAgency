@@ -161,7 +161,33 @@ header > form input[type=email]:focus, header > form input[type=password]:focus 
 /**/
 /**/
 /**/
-/*GESTION DE L'AFFICHAGE DES VOYAGES*/
+/*GESTION DE L'AFFICHAGE DU TRIE PAGE PRINCIPAL*/
+.trie{
+  color: rgb(255, 255, 255);
+}
+
+.formTrie{
+  display: flex;
+  justify-content: center;
+}
+
+.formTrie > div{
+  margin: 0px 10px;
+}
+
+.reset{
+  margin-right: 10px;
+
+}
+
+
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/*GESTION DE L'AFFICHAGE DES VOYAGES PAGE PRINCIPAL*/
 .blockPrincipal{
   margin-left: auto;
   margin-right: auto;
