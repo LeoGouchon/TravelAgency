@@ -114,7 +114,6 @@ nav > a:hover{
   cursor: pointer;
   width: 100%;
   margin-bottom:10px;
-  opacity: 0.8;
 }
 
 .loginContainer > .button:hover{
@@ -133,7 +132,6 @@ nav > a:hover{
   cursor: pointer;
   width: 100%;
   margin-bottom:10px;
-  opacity: 0.8;
 }
 
 header > form {
@@ -175,11 +173,20 @@ header > form input[type=email]:focus, header > form input[type=password]:focus 
   margin: 0px 10px;
 }
 
-.reset{
-  margin-right: 10px;
-  
+button[type="reset"]{
+  font-weight: normal;
+  border-radius: 20px;
+  background: #2196f3;
+  color: #fff;
+  padding: 10px 10px;
+  border: none;
+  width: 100%;
 }
 
+button[type="reset"]:hover{
+  content: "";
+  background: rgba(97, 180, 255, 1);
+}
 
 /**/
 /**/
@@ -302,6 +309,56 @@ header > form input[type=email]:focus, header > form input[type=password]:focus 
   font-weight: 500;
   color: #fff;
  }
+
+ /**/
+ /**/
+ /**/
+ /**/
+ /**/
+ /**/
+ /*GESTION DE L'AFFICHAGE DES ARTICLES DU PANIER*/
+ h1{
+    color: #fff;
+ }
+
+ .voyagePanier {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 20% 70% 10%;
+  gap: 0px 0px;
+  position: relative;
+  min-width: 300px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: inset -5px -5px -5px rgba(255, 255, 255, 0.1);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 30px;
+  overflow: hidden;
+  color: white;
+}
+
+.imageVoyagePanier {
+  grid-area: 1 / 1 / 4 / 2;
+  background-image: url("../data/destination/monza/monzaVille.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.nomVillePanier {
+  grid-area: 1 / 2 / 2 / 3;
+  margin: 10px;
+}
+.complement {
+  grid-area: 2 / 2 / 3 / 3;
+  margin: 10px;
+}
+.modifierCommande {
+  grid-area: 3 / 2 / 4 / 3;
+  margin:10px;
+}
+
+
 
  /**/
  /**/
