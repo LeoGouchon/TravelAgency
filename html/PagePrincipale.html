@@ -35,7 +35,7 @@
 
         <section class="blockPrincipal">
           <section class="trie">
-              <h2>Filtre </h2>
+            <h2>Filtre </h2>
               <form class="formTrie" action="PagePrincipale.html">
                   <div class = "continents">
                       <label for = "continents">Continent </label>
@@ -49,10 +49,13 @@
                           <option value = "oceanie">Océanie</option>
                       </select>
                   </div>
-                  <div class="prixMinMax">
-                    <span class="doubleRange"></span>
-                    <input class="range" value="500" min="300" max="10000" step="100" type="range">
-                    <input class="range" value="50000" min="300" max="10000" step="100" type="range">
+                  <div class = "prixMin">
+                      <label for ="prixMin">min. </label>
+                      <input type="number" name="prixMin" min="0" step="100">
+                  </div>
+                  <div class = "prixMax">
+                        <label for ="prixMax">max. </label>
+                        <input type="number" name="prixMax" min="0" step="100">
                   </div>
                   <div class = "reset">
                       <button type="reset">Rénitialiser</button>
