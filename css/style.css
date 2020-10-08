@@ -328,7 +328,7 @@ button[type="reset"]:hover{
   gap: 0px 0px;
   position: relative;
   min-width: 300px;
-  height: 440px;
+  height: 300px;
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2);
   box-shadow: inset -5px -5px -5px rgba(255, 255, 255, 0.1);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
@@ -349,16 +349,50 @@ button[type="reset"]:hover{
   grid-area: 1 / 2 / 2 / 3;
   margin: 10px;
 }
+
+.nomVillePanier > h3{
+  font-weight: normal;
+}
+
 .complement {
   grid-area: 2 / 2 / 3 / 3;
   margin: 10px;
 }
 .modifierCommande {
   grid-area: 3 / 2 / 4 / 3;
-  margin:10px;
+  margin-left: 10px;
 }
 
+.lienModifierCommande{
+  position: relative;
+  bottom: 10px;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 14px;
+  border-radius: 50px;
+  background: #2196f3;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+}
 
+.lienModifierCommande:hover{
+  content: "";
+  background: rgba(97, 180, 255, 1)
+}
+.prixTotal{
+  position: relative;
+  color: #fff;
+  padding: 10px 10px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: inset -5px -5px -5px rgba(255, 255, 255, 0.1);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 30px;
+  overflow: hidden;
+  color: white;
+}
 
  /**/
  /**/
