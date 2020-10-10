@@ -10,8 +10,9 @@
 body{
   background-image: url("../data/destination/background2.jpg");
   background-repeat: no-repeat;
-  background-size: 100vw;
+  background-size: cover;
   background-attachment: fixed;
+  background-position: center;
   width: 100%;
 
 }
@@ -341,7 +342,7 @@ button[type="reset"]:hover{
 
 .imageVoyagePanier {
   grid-area: 1 / 1 / 4 / 2;
-  background-image: url("../data/destination/monza/monzaVille.jpg");
+  background-image: url("../data/destination/monzaVille.jpg");
   background-size: cover;
   background-position: center;
 }
