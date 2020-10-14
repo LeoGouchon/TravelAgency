@@ -14,7 +14,7 @@ body{
   background-attachment: fixed;
   background-position: center;
   width: 100%;
-
+  color : white;
 }
 
 /**/
@@ -82,7 +82,6 @@ nav > a:hover{
 }
 
 .loginContainer > input{
-  color: white;
   padding: 16px 20px;
   border: none;
   width: 100%;
@@ -106,10 +105,10 @@ nav > a:hover{
 
 /*Button Login*/
 .loginContainer > .button {
+  color: white;
   font-weight: bold;
   border-radius: 50px;
   background: #2196f3;
-  color: white;
   padding: 16px 20px;
   border: none;
   cursor: pointer;
@@ -125,9 +124,9 @@ nav > a:hover{
 }
 
 .loginContainer .buttonCancel {
+  color: white;
   border-radius: 50px;
   background: linear-gradient(145deg, #28292b, #2f3033);
-  color: white;
   padding: 16px 20px;
   border: none;
   cursor: pointer;
@@ -138,7 +137,6 @@ nav > a:hover{
 header > form {
   max-width: 300px;
   padding: 10px;
-  background-color: white;
 }
 
 header > form input[type=email], header > form input[type=password] {
@@ -333,7 +331,6 @@ button[type="reset"]:hover{
    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1);
    border-radius: 15px;
    margin: 30px;
-   color: white;
  }
 
  .voyagePanier {
@@ -379,7 +376,6 @@ button[type="reset"]:hover{
   font-size: 14px;
   border-radius: 50px;
   background: #2196f3;
-  color: white;
   padding: 10px 10px;
   border: none;
   margin: 0 10px;
@@ -398,7 +394,6 @@ button[type="reset"]:hover{
   font-size: 14px;
   border-radius: 50px;
   background: #DB342E;
-  color: white;
   padding: 10px 10px;
   border: none;
 }
@@ -419,13 +414,11 @@ button[type="reset"]:hover{
   border-radius: 15px;
   margin: 30px;
   overflow: hidden;
-  color: white;
 }
 
 .validerCommande{
   border-radius: 50px;
   background: #2196f3;
-  color: white;
   padding: 10px 10px;
   border: none;
   margin-left: 30px;

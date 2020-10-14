@@ -34,36 +34,36 @@
     </header>
     <article class="blockPrincipal">
       <div class="Presentation">
-        <img src="" alt="PhotoDestination"> <!-- photo net -->
-        <img src="" alt=""> <!-- Drapeau du pays -->
+        <img class="imageVilleReservation" src="../data/destination/suzukaVille.jpg" alt="">
+        <img class="drapeauVilleReservation" src="../data/destination/japonDrapeau.jpg" alt="Japon"> <!-- Drapeau du pays -->
         <h1>NomVilleDestination, Pays</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
       <h2>Réservation</h2>
       <form class="" action="./panier.html" method="post">
-        <div class="FirstName">
+        <div class="firstName">
           <label for="FirstName">Prénom* :</label>
           <input type="text" name="FirstName" autocomplete="name"  required autofocus placeholder="Prénom">
         </div>
-        <div class="FamilyName">
+        <div class="familyName">
           <label for="FamilyName">Nom* :</label>
           <input type="text" name="FamilyName" autocomplete="family-name" required placeholder="Nom">
         </div>
-        <div class="Mail">
+        <div class="mail">
           <label for="Mail">Adresse mail* :</label>
           <input type="email" name="Mail" required>
         </div>
-        <div class="Phone">
+        <div class="phone">
           <label for="PhoneNumber">Téléphone :</label>
           <input type="tel" name="PhoneNumber" >
         </div>
-        <div class="Date" >
+        <div class="date" >
           <label for="DateStart">Départ* :</label>
           <input type="date" name="DateStart" required>
           <label for="DateEnd">Retour* : </label>
           <input type="date" name="DateEnd" required>
         </div>
-        <div class="Billet">
+        <div class="billet">
           <label for="Billet">Billet pour le prochain grand-prix :</label>
           <select class="Billet">
             <option value="Aucun">Aucun</option>
@@ -73,29 +73,29 @@
 
           </select>
         </div>
-        <div class="NbAdulte">
+        <div class="nbAdulte">
           <label for="NbAdulte">Nombre d'adulte(s)* : </label>
           <input type="range" name="NbAdulte" min="1" max="10" step="1" value="1">
         </div>
-        <div class="NbEnfant">
+        <div class="nbEnfant">
           <label for="NbAdulte">Nombre d'enfant(s)* : </label>
           <input type="range" name="NbEnfant" min="0" max="10" step="1" value="0">
         </div>
-        <div class="Dejeuner">
+        <div class="dejeuner">
           <label for="Dejeuner">Voulez-vous le petit déjeuner ?</label>
           <input type="checkbox" name="Dejeuner">
         </div>
-        <div class="Renseignement">
+        <div class="renseignement">
           <textarea name="name" rows="8" cols="50" placeholder="Une demande ou un renseignement ?"></textarea>
         </div>
-        <div class="Prix">
+        <div class="prix">
 
         </div>
-        <div class="Reset">
+        <div class="reset">
           <button type="reset" name="button">Réinitialiser la commande</button>
         </div>
-        <div class="Submit">
-          <input type="submit" value="Valider ma commande">
+        <div class="submit">
+          <input class="validerCommande" type="submit" value="Valider ma commande">
         </div>
       </form>
     </article>
