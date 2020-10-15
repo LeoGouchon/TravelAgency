@@ -460,7 +460,6 @@ button[type="reset"]:hover{
    margin: 30px 20px;
  }
 
-
  /**/
  /**/
  /**/
@@ -494,29 +493,46 @@ button[type="reset"]:hover{
 }
 
 
-.reservation>label>input, select, .dateReservation>label>input{
+.reservation>label>input:not([type="checkbox"]), select, .dateReservation>label>input{
   background-color: #232427;
-  box-shadow:  inset 2px 2px 5px #151618,
-               inset -5px -5px 10px #313236;
+  box-shadow:  inset 2px 2px 5px rgba(0, 0, 0, 0.4),
+               inset -5px -5px 10px rgba(255, 255, 255, 0.13);
   width: 100%;
   box-sizing: border-box;
   border-radius: 50px;
+  border-width: 0px;
   padding:16px;
 }
 
-::placeholder{
-  color: #fff;
+::placeholder, input[type="date"]{
+  color: rgba(255, 255, 255, 0.4);
 }
 
-form{
-  color:#fff;
+input[type="checkbox"]{
+  weight:20px;
+  height: 20px;
 }
 
-input[type="date"]{
-  color: #fff;
+label {
+  margin: 10px 0;
 }
 
-select{
+.dateReservation{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 20px;
+}
+
+label[for="dateStart"]{
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+label[for="dateEnd"]{
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+select, form{
   color: #fff;
 }
 
