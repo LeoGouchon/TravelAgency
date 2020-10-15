@@ -460,6 +460,71 @@ button[type="reset"]:hover{
    margin: 30px 20px;
  }
 
+
+ /**/
+ /**/
+ /**/
+ /**/
+ /**/
+ /**/
+ /*GESTION DE L'AFFICHAGE PAGE RESERVATION*/
+ .presentationVoyageReservation{
+   display: flex;
+ }
+
+ .imageVilleReservation{
+   display: block;
+   background-size: cover;
+   height: 300px;
+ }
+
+ .drapeauVilleReservation{
+   float: left;
+   width: 40px;
+   max-height: 27px;
+   margin-right: 10px;
+ }
+
+.descriptionReservation{
+  margin-left: 10px;
+}
+
+.descriptionReservation > p{
+  text-align: justify;
+}
+
+
+.reservation>label>input, select, .dateReservation>label>input{
+  background-color: #232427;
+  box-shadow:  inset 2px 2px 5px #151618,
+               inset -5px -5px 10px #313236;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 50px;
+  padding:16px;
+}
+
+::placeholder{
+  color: #fff;
+}
+
+form{
+  color:#fff;
+}
+
+input[type="date"]{
+  color: #fff;
+}
+
+select{
+  color: #fff;
+}
+
+textarea{
+  background-color: #232427;
+  width: 100%;
+  margin: 10px 0;
+}
  /**/
  /**/
  /**/
