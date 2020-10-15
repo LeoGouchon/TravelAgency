@@ -566,3 +566,18 @@ button#topbutton {
     border-radius: 50px;
     font-weight: bold;
 }
+
+/*GESTION DE L'AFFICHAGE Du Footer*/
+
+.logoReseau img{
+  position: relative;
+  height: 50px;
+  margin-top: 7px;
+  margin-left: 5px;
+  margin-right: 5px;
+  
+}
+
+.logoReseau:hover img  {
+  opacity: 0.6 ;
+}
