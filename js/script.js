@@ -26,116 +26,117 @@ var travels =[
     'srcImgDrapeau': '../data/destination/italieDrapeau.jpg',
     'ville':'Monza',
     'prix':'449',
+    'pays':'Italie',
     'continent':'europe'
   },
   {
-    'srcImgVille':'',
-    'srcImgDrapeau':'',
+    'srcImgVille':'../data/destination/spielbergVille.jpg',
+    'srcImgDrapeau':'../data/destination/autricheDrapeau.jpg',
     'ville':'Spielberg',
     'prix':'',
     'continent':'europe'
   },
   {
-    'srcImgVille':'',
-    'srcImgDrapeau':'',
+    'srcImgVille':'../data/destination/budapestVille.jpg',
+    'srcImgDrapeau':'../data/destination/hongrieDrapeau.jpg',
     'ville':'Budapest',
     'prix':'',
     'continent':'europe'
   },
   {
-    'srcImgVille':'',
-    'srcImgDrapeau':'',
+    'srcImgVille':'../data/destination/monacoVille.jpg',
+    'srcImgDrapeau':'../data/destination/monacoDrapeau.jpg',
     'ville':'Monaco',
     'prix':'',
     'continent':'europe'
   },
   {
-    'srcImgVille':'',
-    'srcImgDrapeau':'',
+    'srcImgVille':'../data/destination/mexicoVille.jpg',
+    'srcImgDrapeau':'../data/destination/mexiqueDrapeau.jpg',
     'ville':'Mexico',
     'prix':'',
     'continent':'ameriqueSud'
   },
   {
-    'srcImgVille':'',
-    'srcImgDrapeau':'',
+    'srcImgVille':'../data/destination/barceloneVille.jpg',
+    'srcImgDrapeau':'../data/destination/espagneDrapeau.jpg',
     'ville':'Barcelone',
     'prix':'',
     'continent':'europe'
   },
   {
-    'srcImgVille':'',
-    'srcImgDrapeau':'',
+    'srcImgVille':'../data/destination/suzukaVille.jpg',
+    'srcImgDrapeau':'../data/destination/japonDrapeau.jpg',
     'ville':'Suzuka',
     'prix':'',
     'continent':'asie'
   },
   {
-    'srcImgVille':'',
-    'srcImgDrapeau':'',
+    'srcImgVille':'../data/destination/istenbulVille.jpg',
+    'srcImgDrapeau':'../data/destination/turquieDrapeau.jpg',
     'ville':'Istanbul',
     'prix':'',
     'continent':'asie'
   },
   {
-    'srcImgVille':'',
-    'srcImgDrapeau':'',
+    'srcImgVille':'../data/destination/bahreïnVille.jpg',
+    'srcImgDrapeau':'../data/destination/BahreïnDrapeau.jpg',
     'ville':'Bahreïn',
     'prix':'',
     'continent':'asie'
   },
   {
-    'srcImgVille':'',
-    'srcImgDrapeau':'',
+    'srcImgVille':'../data/destination/elroyVille.jpg',
+    'srcImgDrapeau':'../data/destination/etatsunisDrapeau.jpg',
     'ville':'Elroy',
     'prix':'',
     'continent':'ameriqueNord'
   },
   {
-    'srcImgVille':'',
-    'srcImgDrapeau':'',
+    'srcImgVille':'../data/destination/castelletVille.jpg',
+    'srcImgDrapeau':'../data/destination/franceDrapeau.jpg',
     'ville':'Castellet',
     'prix':'',
     'continent':'europe'
   },
   {
-    'srcImgVille':'',
-    'srcImgDrapeau':'',
+    'srcImgVille':'../data/destination/sãopaoloVille.jpg',
+    'srcImgDrapeau':'../data/destination/bresilDrapeau.jpg',
     'ville':'São Paulo',
     'prix':'',
     'continent':'ameriqueSud'
   },
   {
-    'srcImgVille':'',
-    'srcImgDrapeau':'',
+    'srcImgVille':'../data/destination/kyalamiVille.jpg',
+    'srcImgDrapeau':'../data/destination/afriquesudDrapeau.jpg',
     'ville':'Kyalami',
     'prix':'',
     'continent':'afrique'
   },
   {
-    'srcImgVille':'',
-    'srcImgDrapeau':'Shanghai',
-    'ville':'',
+    'srcImgVille':'../data/destination/shangaiVille.jpg',
+    'srcImgDrapeau':'../data/destination/chineDrapeau.jpg',
+    'ville':'Shanghai',
     'prix':'',
     'continent':'asie'
   },
   {
-    'srcImgVille':'',
-    'srcImgDrapeau':'',
-    'ville':'Silverstone',
+    'srcImgVille':'../data/destination/nurburgringVille.jpg',
+    'srcImgDrapeau':'../data/destination/allemagneDrapeau.jpg',
+    'ville':'nurburgring',
     'prix':'',
     'continent':'europe'
   },
   {
-    'srcImgVille':'',
-    'srcImgDrapeau':'',
+    'srcImgVille':'../data/destination/singapourVille.jpg',
+    'srcImgDrapeau':'../data/destination/singapourDrapeau.jpg',
     'ville':'Singapour',
     'prix':'',
     'continent':'asie'
   },
   {
-    'srcImgVille':'',
-    'srcImgDrapeau':'',
+    'srcImgVille':'../data/destination/melbourneVille.jpg',
+    'srcImgDrapeau':'../data/destination/australieDrapeau.jpg',
     'ville':'Merlbourne',
     'prix':'',
     'continent':'oceanie'
@@ -147,27 +148,7 @@ var travels =[
     'prix':'',
     'continent':''
   },
-  {
-    'srcImgVille':'',
-    'srcImgDrapeau':'',
-    'ville':'',
-    'prix':'',
-    'continent':''
-  },
-  {
-    'srcImgVille':'',
-    'srcImgDrapeau':'',
-    'ville':'',
-    'prix':'',
-    'continent':''
-  },
-  {
-    'srcImgVille':'',
-    'srcImgDrapeau':'',
-    'ville':'',
-    'prix':'',
-    'continent':''
-  },
+
 ]
 
 var document = '../html/PagePrincipale.html';
@@ -180,7 +161,7 @@ for(var travel of travels){
           <img src="`+travel.srcImgVille+`" alt="">
         </div>
         <img class="drapeau" src="`+travel.srcImgDrapeau+`" alt="">
-        <h2>`+travel.ville+`</h2> <!--titre-->
+        <h2>`+travel.ville+`</h2> 
         <a href="./reservation.html?destination=`+travel.ville+`">à partir de `+travel.prix+`€</a>
         <p class="temperature">30°C</p>
       </div>
