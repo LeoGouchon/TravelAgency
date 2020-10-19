@@ -493,7 +493,7 @@ button[type="reset"]:hover{
 }
 
 
-.reservation>label>input:not([type="checkbox"]), select, .dateReservation>label>input{
+.reservation>label>input:not([type="checkbox"]), .reservation > select, .dateReservation>label>input{
   background-color: #232427;
   box-shadow:  inset 2px 2px 5px rgba(0, 0, 0, 0.4),
                inset -5px -5px 10px rgba(255, 255, 255, 0.13);
@@ -509,7 +509,7 @@ button[type="reset"]:hover{
 }
 
 input[type="checkbox"]{
-  weight:20px;
+  font-weight:20px;
   height: 20px;
 }
 
@@ -532,7 +532,7 @@ label[for="dateEnd"]{
   grid-area: 1 / 2 / 2 / 3;
 }
 
-select, form{
+.reservation > select, form{
   color: #fff;
 }
 
@@ -549,7 +549,7 @@ textarea{
  /**/
  /**/
  /*GESTION DE L'AFFICHAGE DU BOUTON SCROLL*/
- 
+
 button#topbutton {
     display:none;
     position: fixed;
@@ -571,12 +571,18 @@ button#topbutton {
 
 .logoReseau img{
   position: relative;
-  height: 50px;
-  margin-left: 2px;
-  margin-right: 2px;
-  
+  height: 30px;
+  margin-top: 7px;
+  margin-left: 5px;
+  margin-right: 5px;
+  filter: invert(100%);
+  transition-duration: 0.5s;
 }
 
 .logoReseau:hover img  {
   opacity: 0.6 ;
+}
+
+footer > a {
+  text-decoration: none;
 }

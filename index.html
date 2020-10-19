@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang= "fr">
     <head>
-        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="./css/style.css">
         <meta charset = "UFT-8">
         <title>accueil</title>
     </head>
     <body>
-        
+
         <header> <!--Haut de page , création du gros de la page, on intègre la navigation au menu-->
           <nav>
-                <a href = "./pagePrincipale.html">   <!--création du navigateur-->
+                <a href = "./index.html">   <!--création du navigateur-->
                     Accueil
                 </a>
-                <a href = "./panier.html">
+                <a href = "./html/panier.html">
                     Panier
                 </a>
-                <a href = "./contact.html">
+                <a href = "./html/contact.html">
                     Contact
                 </a>
                 <a onclick="openCloseForm()" class="loginButton">Se connecter</a>
             </nav>
             <div class="popUpLogin" id="login">
-              <form action="PagePrincipale.html" class="loginContainer">
+              <form action="index.html" class="loginContainer">
                   <h2>Se connecter</h2>
                   <label for="entrerEmail">Email</label>
                   <input type="email" name="email" placeholder="Entrer votre email">
@@ -36,7 +36,7 @@
         <section class="blockPrincipal">
           <section class="trie">
             <h2>Filtre </h2>
-              <form class="formTrie" action="PagePrincipale.html">
+              <form class="formTrie" action="index.html">
                   <div class = "continents">
                       <label for = "continents">Continent </label>
                       <select class = "continents">
@@ -61,10 +61,10 @@
                       <button type="reset">Rénitialiser</button>
                   </div>
               </form>
-                
+
 
           </section>
-          
+
           <article class="sectionArticle">
 
             <!--
@@ -87,26 +87,24 @@
         </section>
 
         <footer> <!--bas de page-->
-              <a class="logoReseau" href ="./contact.html">
-                <img src="#" alt="SiteWeb">
+              <a class="logoReseau" href ="./html/contact.html">
+                <img src="./data/icon/webSiteLogo.png" alt="Site Web">
               </a>
               <a class="logoReseau" href="#">
-                <img src="../data/icon/instagramLogo.jpg" alt="Instagram">
+                <img src="./data/icon/instagramLogo.png" alt="Instagram">
               </a>
               <a class="logoReseau" href="#">
-                <img src="../data/icon/facebookLogo.jpg" alt="Facebook">
+                <img src="./data/icon/facebookLogo.png" alt="Facebook">
               </a>
               <a class="logoReseau" href="#">
-                <img src="../data/icon/twitterLogo.jpg" alt="Twitter">
+                <img src="./data/icon/twitterLogo.png" alt="Twitter">
               </a>
               <!--<div id="scrolltotop"><div></div></div>-->
         </footer>
 
         <button  id="topbutton" onclick="topFunction()" > &#8593 </button>  <!--creation du bouton pour revenir en haut de page-->
-    <script src="../js/script.js"></script>
+    <script src="./js/script.js"></script>
 
-   
 
-        
     </body>
 </html>
