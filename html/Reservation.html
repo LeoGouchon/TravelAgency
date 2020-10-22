@@ -41,54 +41,46 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
       </div>
-      <h2>Réservation</h2>
       <form class="reservation" action="./panier.html" method="post">
-          <label for="firstName">Prénom* :
-            <input class="text" type="text" name="firstName" autocomplete="name"  required autofocus placeholder="Prénom*">
-          </label>
-          <label for="familyName">Nom* :
-            <input class="text" type="text" name="familyName" autocomplete="family-name" required placeholder="Nom*">
-          </label>
-          <label for="mail">Adresse mail* :
-            <input class="text" type="email" name="mail" required placeholder="Adresse email*">
-          </label>
-          <label for="phoneNumber">Téléphone :
-            <input class="text" type="tel" name="phoneNumber" placeholder="Téléphone" >
-          </label>
+          <h2>Réservation</h2>
+          <label for="firstName">Prénom* :</label>
+          <input class="text" type="text" name="firstName" autocomplete="name"  required autofocus>
+          <label for="familyName">Nom* :</label>
+          <input class="text" type="text" name="familyName" autocomplete="family-name" required>
+          <label for="mail">Adresse mail* :</label>
+          <input class="text" type="email" name="mail" required>
+          <label for="phoneNumber">Téléphone :</label>
+          <input class="text" type="tel" name="phoneNumber">
           <div class="dateReservation">
-            <label for="dateStart">Départ* :
-              <input type="date" name="dateStart" required placeholder="Date de départ*">
-            </label>
-            <label for="dateEnd">Retour* :
-              <input type="date" name="dateEnd" required placeholder="Date de retour*">
-            </label>
+            <label for="dateStart">Départ* :</label>
+            <input type="date" name="dateStart" required>
+            <label for="dateEnd">Retour* :</label>
+            <input type="date" name="dateEnd" required>
           </div>
-          <label for="Billet">Billet pour le prochain grand-prix :
+          <label for="Billet">Billet pour le prochain grand-prix :</label>
             <select class="Billet">
               <option value="Aucun">Aucun</option>
               <option value="Tribune">Tribune</option>
               <option value="Accès au Paddock">Accès au Paddock</option>
               <option value="VIP">VIP</option>
             </select>
-          </label>
-          <label for="nbAdulte">Nombre d'adulte(s)* :
-            <input type="range" name="nbAdulte" min="1" max="10" step="1" value="1">
-          </label>
-          <label for="nbEnfant">Nombre d'enfant(s)* :
-            <input type="range" name="nbEnfant" min="0" max="10" step="1" value="0">
-          </label>
-          <label for="dejeuner">Avec petit déjeuner ?
-            <input type="checkbox" name="dejeuner">
-          </label>
+          <div class="rangePersonne">
+            <label for="nbAdulte">Nombre d'adulte(s)* : <output id="rangevalueAdulte">1</output></label>
+            <input type="range" name="nbAdulte" min="1" max="10" step="1" value="1" onmousemove="rangevalueAdulte.value=value">
+            <label for="nbEnfant">Nombre d'enfant(s)* :  <output id="rangevalueEnfant">0</output></label>
+            <input type="range" name="nbEnfant" min="0" max="10" step="1" value="0" onmousemove="rangevalueEnfant.value=value">
+          </div>
+          <label for="dejeuner">Avec petit déjeuner ?</label>
+          <input type="checkbox" name="dejeuner">
           <textarea name="name" rows="8" cols="50" placeholder="Une demande ou un renseignement ?"></textarea>
         <div class="prix">
-
+          <!-- Affichage du prix en temps réel grâce au js -->
         </div>
         <div class="reset">
           <button type="reset" name="button">Réinitialiser la commande</button>
         </div>
         <div class="submit">
-          <input class="validerCommande" type="submit" value="Valider ma commande">
+          <input class="validerCommandeReservation" type="submit" value="Valider ma réservation">
         </div>
       </form>
     </article>
