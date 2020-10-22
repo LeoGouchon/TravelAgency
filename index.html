@@ -6,7 +6,6 @@
         <title>accueil</title>
     </head>
     <body>
-
         <header> <!--Haut de page , création du gros de la page, on intègre la navigation au menu-->
           <nav>
                 <a href = "./index.html">   <!--création du navigateur-->
@@ -36,7 +35,7 @@
         <section class="blockPrincipal">
           <section class="trie">
             <h2>Filtre </h2>
-              <form class="formTrie" action="index.html">
+              <form class="formTrie" onchange="applyFilter()">
                       <label for = "continents">Continent </label>
                       <select class = "continents">
                           <option value = "tousContinents">-</option>
@@ -48,9 +47,9 @@
                           <option value = "oceanie">Océanie</option>
                       </select>
                       <label for ="prixMin">min. </label>
-                      <input type="number" name="prixMin" min="0" step="100">
+                      <input type="number" name="prixMin" min="0" step="100" onkeyup="applyFilter()">
                       <label for ="prixMax">max. </label>
-                      <input type="number" name="prixMax" min="0" step="100">
+                      <input type="number" name="prixMax" min="0" step="100" onkeyup="applyFilter()">
                   <div class = "reset">
                       <button type="reset">Rénitialiser</button>
                   </div>
@@ -61,21 +60,7 @@
 
           <article class="sectionArticle">
 
-            <!--
-            <div class="voyage">
-              <div class="boite">
-                <div class="contenu">
-                  <div class="photo">
-                    <img src="../data/destination/monza/monzaVille.jpg" alt="photoDestination">
-                  </div>
-                  <img class="drapeau" src="../data/destination/italieDrapeau.jpg" alt="drapeauPays">
-                  <h2>Voyage 1 </h2>
-                  <a href="./reservation.html">à partir de 130$</a>
-                  <p class="temperature">30°C</p>
-                </div>
-              </div>
-            </div>
-          -->
+          <!-- TOUT LES VOYAGES SERONT AFFICHES ICI -->
 
           </article>
         </section>
@@ -93,7 +78,6 @@
               <a class="logoReseau" href="#">
                 <img src="./data/icon/twitterLogo.png" alt="Twitter">
               </a>
-              <!--<div id="scrolltotop"><div></div></div>-->
         </footer>
 
         <button  id="topbutton" onclick="topFunction()" > &#8593 </button>  <!--creation du bouton pour revenir en haut de page-->
