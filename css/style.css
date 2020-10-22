@@ -525,7 +525,11 @@ button[type="reset"]:hover{
 }
 
 input[type="checkbox"]{
+<<<<<<< HEAD
+  width:20px;
+=======
   weight:20px;
+>>>>>>> 00e0f7641fe9aeb629ceaf0f733ac9db99d43ad9
   height: 20px;
 }
 
