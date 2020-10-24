@@ -143,10 +143,7 @@ nav > a:hover{
 }
 
 .loginContainer > .button:hover{
-  content: "";
-  background: rgba(97, 180, 255, 1);
-  height: 100%;
-  width: 100%;
+  background: var(--color-button-hover);
 }
 
 .loginContainer .buttonCancel {
@@ -185,7 +182,7 @@ header > form input[type=email], header > form input[type=password] {
 /**/
 /*GESTION DE L'AFFICHAGE DU TRIE PAGE PRINCIPAL*/
 .trie{
-  color: rgb(255, 255, 255);
+  color: var(--color-text);
 }
 
 .formTrie{
@@ -209,7 +206,7 @@ header > form input[type=email], header > form input[type=password] {
 button[type="reset"]{
   font-weight: normal;
   border-radius: 20px;
-  background: var(--color-button);
+  background: var(--color-button-danger);
   color: var(--color-text);
   padding: 10px 10px;
   border: none;
@@ -217,9 +214,10 @@ button[type="reset"]{
 }
 
 button[type="reset"]:hover{
-  content: "";
-  background: rgba(97, 180, 255, 1);
+  background: var(--color-button-danger-hover);
 }
+
+
 
 /**/
 /**/
@@ -417,7 +415,6 @@ button[type="reset"]:hover{
 }
 
 .lienModifierCommande:hover{
-  content: "";
   background: var(--color-button-hover);
 }
 
@@ -435,7 +432,6 @@ button[type="reset"]:hover{
 }
 
 .lienSuprCommande:hover{
-  content: "";
   background: var(--color-button-danger-hover);
 }
 
@@ -475,7 +471,6 @@ button[type="reset"]:hover{
 }
 
 .validerCommande:hover{
-  content: "";
   background: var(--color-button-hover);
 }
 
@@ -486,6 +481,10 @@ button[type="reset"]:hover{
  /**/
  /**/
  /*GESTION DE L'AFFICHAGE PAGE RESERVATION*/
+.reservation{
+  color : var(--color-text);
+}
+
  .presentationVoyageReservation{
    display: flex;
  }
@@ -511,43 +510,57 @@ button[type="reset"]:hover{
   text-align: justify;
 }
 
+.reservation{
+  margin-top: var(--margin);
+}
 
-.reservation>label>input:not([type="checkbox"]), .reservation > select, .dateReservation>label>input{
-  background-color: var(--color-background);
-  box-shadow:  inset 2px 2px 5px rgba(0, 0, 0, 0.4),
-               inset -5px -5px 10px rgba(255, 255, 255, 0.13);
+.reservation>input:not([type="checkbox"]), .reservation>select, .dateReservation>input, .rangePersonne>input{
+  background-color: var(--color-background-darker);
+  color: var(--color-text);
   width: 100%;
   box-sizing: border-box;
-  border-radius: 50px;
   border-width: 0px;
   padding:16px;
 }
 
 ::placeholder, input[type="date"]{
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--color-text);
+}
+
+.reservation>input, .reservation>.dateReservation, .reservation>select{
+  margin-bottom: var(--margin);
 }
 
 input[type="checkbox"]{
   width:20px;
+<<<<<<< HEAD
+=======
+  weight:20px;
+>>>>>>> 4b01d57570e32e977382159c153d08d76708f75f
   height: 20px;
+  vertical-align: middle;
 }
 
-label {
-  margin: var(--margin) 0;
-}
-
-.dateReservation{
+.dateReservation, .rangePersonne{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   gap: 0px 20px;
 }
 
-label[for="dateStart"]{
+.reservation>h2{
+  margin: var(--margin) 0;
+}
+
+output{
+  font-weight: bold;
+}
+
+label[for="dateStart"], label[for="nbAdulte"]{
   grid-area: 1 / 1 / 2 / 2;
 }
 
-label[for="dateEnd"]{
+label[for="dateEnd"], label[for="nbEnfant"]{
   grid-area: 1 / 2 / 2 / 3;
 }
 
@@ -559,6 +572,21 @@ textarea{
   background-color: var(--color-background);
   width: 100%;
   margin: var(--margin) 0;
+}
+
+.validerCommandeReservation{
+  border-radius: 50px;
+  width: 100%;
+  background: var(--color-button);
+  padding: 10px 10px;
+  border: none;
+  margin: var(--margin) 0;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.validerCommandeReservation:hover{
+  background: var(--color-button-hover);
 }
 
  /**/
