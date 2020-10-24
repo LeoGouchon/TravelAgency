@@ -533,10 +533,6 @@ button[type="reset"]:hover{
 
 input[type="checkbox"]{
   width:20px;
-<<<<<<< HEAD
-=======
-  weight:20px;
->>>>>>> 4b01d57570e32e977382159c153d08d76708f75f
   height: 20px;
   vertical-align: middle;
 }
