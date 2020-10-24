@@ -37,6 +37,9 @@ body{
   width: 100%;
   color : var(--color-text);
 }
+a{
+  text-decoration: none;
+}
 
 /**/
 /**/
@@ -525,11 +528,7 @@ button[type="reset"]:hover{
 }
 
 input[type="checkbox"]{
-<<<<<<< HEAD
   width:20px;
-=======
-  weight:20px;
->>>>>>> 00e0f7641fe9aeb629ceaf0f733ac9db99d43ad9
   height: 20px;
 }
 
@@ -568,6 +567,79 @@ textarea{
  /**/
  /**/
  /**/
+ /*GESTION DE L'AFFICHAGE PAGE contact*/
+ 
+ .blockPrincipalContact{
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 1200Px;
+   background: var(--color-background);
+   padding: 20px;
+ }
+ .presentation{
+  word-wrap: break-word;
+  margin-left: 30px;
+  margin-right: 10px;
+ }
+.presentation h2{
+  text-align: justify;
+}
+.presentation p{
+  text-align : justify;
+
+ line-height: 1.5em;
+  margin: 20px auto;
+}
+
+.coordonees h2{
+margin-left: 20px;
+text-align: left;
+}
+.coordonees a{
+  text-decoration: none;
+  color: var(--color-text)
+}
+
+.email{
+  font-weight: bold;
+  border-radius: 50px;
+  background: var(--color-button);
+  text-decoration: none;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: fit-content;
+  margin : 20px auto;
+}
+
+.adress #map{
+  margin: 20px auto;
+}
+
+.butonPhone{
+  font-weight: bold;
+  border-radius: 50px;
+  background: var(--color-button);
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: fit-content;
+  margin: 20px auto;
+  margin-bottom:10px;
+}
+.email:hover{
+    background: var(--color-button-hover);
+}
+.butonPhone:hover{
+  background: var(--color-button-hover);
+}
+
+
  /*GESTION DE L'AFFICHAGE DU BOUTON SCROLL*/
 
 button#topbutton {
