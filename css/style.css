@@ -119,9 +119,11 @@ nav > a:hover{
   margin-bottom: var(--margin);
   opacity: 0.8;
   border-radius: 50px;
+  color : var(--color-text);
   background: var(--color-background-darker);
   box-shadow: inset 20px 20px 60px var(--color-shadow),
               inset -20px -20px 60px var(--color-light);
+
 }
 
 .popUpLogin {
