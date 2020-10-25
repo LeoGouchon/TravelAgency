@@ -1,38 +1,39 @@
-const fetch = require("node-fetch"); //sinon fetch n'est pas reconnu, on a avant téléchargé npm i node-fetch
+// const fetch = require("node-fetch"); //sinon fetch n'est pas reconnu, on a avant téléchargé npm i node-fetch
 
 //
 //
 //
 //S'active quand le js est ouvert
-fetch("http://127.0.0.1:3000","./js/dataVoyage.json")
+fetch("./js/dataVoyage.json")
   .then(function(response){
       return response.json() //on convert le fichier au format json
   }).then(function(json){
-      console.log('le Fetch bdd fonctionne');
+      //console.log('le Fetch bdd fonctionne');
       allTravels = json; //on renomme la bdd en 'allTravels' qui regroupe tout les voyages
       initialiseVoyage(allTravels);
-  }).catch(function(err){
-      console.log('erreur fetch bdd :\n'+err);
-  })
+  });
 
 
 function initialiseVoyage(listTravels){
-  for(travel in listTravels){ //On parcours le fichier json voyage par voyage
+  for(travel of listTravels){ //On parcours le fichier json voyage par voyage
     weatherInfo(travel.ville); //On va chercher la température pour tous les travels de listTravels
   afficherVoyage();
   }
+}
 
 function weatherInfo(ville){
   var key='32d0bc8abf422135f9c0590d8beaac48';
+  //console.log(ville);
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=`+ ville +`&units=metric&appid=`+ key)
   .then(function(resp){return resp.json() }) //convert data to json
   .then(function(data){
+    //console.log(data);
     var tempData = data.main.temp;
     console.log(tempData);
     returnTemp(tempData, ville);
   })
   .catch(function(err){
-    console.log('weatherInfo '+err);
+    //console.log('weatherInfo '+err);
   })
 }
 
@@ -54,7 +55,6 @@ function returnTemp(tempData, ville){
 //actuellement dans un fichier json
 
 function afficherVoyage(){
-  var document = '../index.html';
   for(var travel of allTravels){
     document.getElementsByClassName('sectionArticle')[0].innerHTML +=
     `<div class="voyage">
@@ -66,7 +66,7 @@ function afficherVoyage(){
           <img class="drapeau" src="`+travel.srcImgDrapeau+`" alt="">
           <h2>`+travel.ville+`</h2>
           <a href="./reservation.html?destination=`+travel.ville+`">à partir de `+travel.prix+`€</a>
-          <p class="temperature">`+travel.temperature+`°</p>
+          <p class="temperature">`+travel.temperature+`°c</p>
         </div>
       </div>
     </div>`;
@@ -97,8 +97,6 @@ function closeForm() {
 
 var mybutton = document.getElementById("topbutton");
 
-
-
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -110,8 +108,7 @@ function scrollFunction() {
     }
   }
 
-  function topFunction(){
+function topFunction(){
     document.body.scrollTop=0;
     document.documentElement.scrollTop=0;
   }
-}
