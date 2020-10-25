@@ -20,6 +20,7 @@
   --color-text:#fff;
   --radius:20px;
   --margin:10px;
+  --transition-time:0.5s;
 }
 
 *{
@@ -38,10 +39,14 @@ body{
   width: 100%;
   color : var(--color-text);
 }
+
 a{
   text-decoration: none;
 }
 
+:hover{
+  transition-duration: var(--transition-time);
+}
 /**/
 /**/
 /**/
@@ -67,11 +72,9 @@ nav > a{
   margin-left: 20px;
   text-decoration: none;
   color: var(--color-text);
-  transition: 0.5;
 }
 
 nav > a:hover{
-  transition: 0.5;
   text-shadow: 0px 0px rgba(255, 255, 255, 1);
 }
 
@@ -264,7 +267,6 @@ button[type="reset"]:hover{
   border: 2px solid #1e1f23;
   border-radius: 15px;
   box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-  transition: 0.5s;
   overflow: hidden;
 }
 
@@ -581,7 +583,7 @@ textarea{
  /**/
  /**/
  /**/
- /*GESTION DE L'AFFICHAGE PAGE act*/
+ /*GESTION DE L'AFFICHAGE PAGE CONTACT*/
 
  .blockPrincipalContact{
    display: flex;
@@ -603,8 +605,7 @@ textarea{
 }
 .presentation p{
   text-align : justify;
-
- line-height: 1.5em;
+  line-height: 1.5em;
   margin: 20px auto;
 }
 
@@ -623,10 +624,9 @@ text-align: left;
   background: var(--color-button);
   text-decoration: none;
   padding: 16px 20px;
-  border: none;
   cursor: pointer;
   text-align: center;
-  width: fit-content;
+  width: 200px;
   margin : 20px auto;
 }
 
@@ -639,13 +639,13 @@ text-align: left;
   border-radius: 50px;
   background: var(--color-button);
   padding: 16px 20px;
-  border: none;
   cursor: pointer;
   text-align: center;
-  width: fit-content;
+  width: 200px;
   margin: 20px auto;
   margin-bottom:10px;
 }
+
 .email:hover{
     background: var(--color-button-hover);
 }
@@ -695,11 +695,11 @@ footer{
   margin-left: 5px;
   margin-right: 5px;
   filter: invert(100%);
-  transition-duration: 0.5s;
 }
 
 .logoReseau:hover img  {
   opacity: 0.6 ;
+  transition-duration: var(--transition-time);
 }
 
 footer > a {
