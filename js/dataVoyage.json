@@ -99,7 +99,7 @@
   {
     "srcImgVille":"./data/destination/kyalamiVille.jpg",
     "srcImgDrapeau":"./data/destination/afriquesudDrapeau.jpg",
-    "ville":"Kyalami",
+    "ville":"Johannesbourg",
     "prix":"",
     "continent":"afrique",
     "temperature":  ""
@@ -115,7 +115,7 @@
   {
     "srcImgVille":"./data/destination/nurburgringVille.jpg",
     "srcImgDrapeau":"./data/destination/allemagneDrapeau.jpg",
-    "ville":"nurburgring",
+    "ville":"Nürburg",
     "prix":"",
     "continent":"europe",
     "temperature":  ""
@@ -131,7 +131,7 @@
   {
     "srcImgVille":"./data/destination/melbourneVille.jpg",
     "srcImgDrapeau":"./data/destination/australieDrapeau.jpg",
-    "ville":"Merlbourne",
+    "ville":"Melbourne",
     "prix":"",
     "continent":"oceanie",
     "temperature":  ""
