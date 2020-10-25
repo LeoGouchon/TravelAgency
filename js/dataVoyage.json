@@ -6,6 +6,7 @@
     "prix":"449",
     "pays":"Italie",
     "continent":"europe",
+    "description":"",
     "temperature": ""
   },
   {
@@ -14,6 +15,7 @@
     "ville":"Spielberg",
     "prix":"",
     "continent":"europe",
+    "description":"",
     "temperature":  ""
   },
   {
@@ -22,6 +24,7 @@
     "ville":"Budapest",
     "prix":"",
     "continent":"europe",
+    "description":"",
     "temperature":  ""
   },
   {
@@ -30,6 +33,7 @@
     "ville":"Monaco",
     "prix":"",
     "continent":"europe",
+    "description":"",
     "temperature":  ""
   },
   {
@@ -38,6 +42,7 @@
     "ville":"Mexico",
     "prix":"",
     "continent":"ameriqueSud",
+    "description":"",
     "temperature":  ""
   },
   {
@@ -46,6 +51,7 @@
     "ville":"Barcelone",
     "prix":"",
     "continent":"europe",
+    "description":"",
     "temperature":  ""
   },
   {
@@ -54,6 +60,7 @@
     "ville":"Suzuka",
     "prix":"",
     "continent":"asie",
+    "description":"",
     "temperature":  ""
   },
   {
@@ -62,6 +69,7 @@
     "ville":"Istanbul",
     "prix":"",
     "continent":"asie",
+    "description":"",
     "temperature":   ""
   },
   {
@@ -70,6 +78,7 @@
     "ville":"Bahreïn",
     "prix":"",
     "continent":"asie",
+    "description":"",
     "temperature":   ""
   },
   {
@@ -78,6 +87,7 @@
     "ville":"Elroy",
     "prix":"",
     "continent":"ameriqueNord",
+    "description":"",
     "temperature":  ""
   },
   {
@@ -86,6 +96,7 @@
     "ville":"Castellet",
     "prix":"",
     "continent":"europe",
+    "description":"",
     "temperature":  ""
   },
   {
@@ -94,6 +105,7 @@
     "ville":"São Paulo",
     "prix":"",
     "continent":"ameriqueSud",
+    "description":"",
     "temperature":  ""
   },
   {
@@ -102,6 +114,7 @@
     "ville":"Johannesbourg",
     "prix":"",
     "continent":"afrique",
+    "description":"",
     "temperature":  ""
   },
   {
@@ -110,6 +123,7 @@
     "ville":"Shanghai",
     "prix":"",
     "continent":"asie",
+    "description":"",
     "temperature":  ""
   },
   {
@@ -118,6 +132,7 @@
     "ville":"Nürburg",
     "prix":"",
     "continent":"europe",
+    "description":"",
     "temperature":  ""
   },
   {
@@ -126,6 +141,7 @@
     "ville":"Singapour",
     "prix":"",
     "continent":"asie",
+    "description":"",
     "temperature":  ""
   },
   {
@@ -134,6 +150,7 @@
     "ville":"Melbourne",
     "prix":"",
     "continent":"oceanie",
+    "description":"",
     "temperature":  ""
   }
 ]

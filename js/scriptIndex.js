@@ -10,10 +10,6 @@ fetch("./js/dataVoyage.json")
       allTravels = json; //on renomme la bdd en 'allTravels' qui regroupe tout les voyages
       initialiseVoyage(allTravels);
       //console.log('fini de initialiser')
-  //})
-  //.then(function(){
-  //    console.log('3e then');
-  //    afficherVoyage();
   });
 
 
