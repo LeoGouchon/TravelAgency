@@ -88,12 +88,12 @@ function prixEnfantDate(nombreJour){
 }
 
 function dejeune(checkbox){
-    //If it is checked.
+
     if(checkbox.checked){
         var prixDejeune = (parseInt(document.getElementById("nombreEnfant").value) + parseInt(document.getElementById("nombreAdulte").value))*prixDejeuner * getDays() ;
         return prixDejeune;
     }
-    //If it has been unchecked.
+
     else{
         var prixDejeune = 0;
         return prixDejeune;
@@ -108,3 +108,4 @@ function prixTotal(){
 
 
 $(".listenPrixTotal").on("change", prixTotal);
+
