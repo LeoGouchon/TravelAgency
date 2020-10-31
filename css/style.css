@@ -56,16 +56,17 @@ a{
 /* GESTION DE L'AFFICHAGE DU HEADER*/
 header{
   background: var(--color-background);
-  margin-bottom: var(--margin);
+  margin: var(--margin) auto;
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-bottom: 10px;
 }
 
 nav{
-    margin-top: var(--margin);
-    text-align: right;
+    margin: var(--margin) 0;
     padding: 10px 20px;
+    display: inline-block;
+    text-align: right;
+    float: right;
 }
 
 nav > a{
@@ -78,6 +79,11 @@ nav > a:hover{
   text-shadow: 0px 0px rgba(255, 255, 255, 1);
 }
 
+.nomSite{
+    margin-left: var(--margin);
+    margin-top: var(--margin);
+    display: inline-block;
+}
 /**/
 /**/
 /**/

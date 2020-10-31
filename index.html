@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang= "fr">
     <head>
+        <link rel="icon" href="./data/icon/airplane.png"/>
         <link rel="stylesheet" href="./css/style.css">
         <meta charset = "UFT-8">
         <title>FastTravel</title>
     </head>
     <body>
         <header> <!--Haut de page , création du gros de la page, on intègre la navigation au menu-->
+          <h1 class="nomSite">FastTravel</h1>
           <nav>
                 <a href = "./index.html">   <!--création du navigateur-->
                     Accueil
@@ -34,7 +36,6 @@
 
         <section class="blockPrincipal">
           <section class="trie">
-            <h2>Filtre </h2>
               <form class="formTrie" onchange="applyFilter()">
                       <label for = "continents">Continent </label>
                       <select class = "continents">
