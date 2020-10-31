@@ -217,6 +217,7 @@ button[type="reset"]{
   padding: 10px 10px;
   border: none;
   width: 100%;
+  margin-top: var(--margin)
 }
 
 button[type="reset"]:hover{
@@ -508,7 +509,7 @@ button[type="reset"]:hover{
   margin-top: var(--margin);
 }
 
-.reservation>input:not([type="checkbox"]), .reservation>select, .dateReservation>input, .rangePersonne>input{
+.reservation>input:not([type="checkbox"]), .reservation>select, .dateReservation>input, .rangePersonne>input, textarea, .prixVoyage, select{
   background-color: var(--color-background-darker);
   color: var(--color-text);
   width: 100%;
@@ -559,9 +560,11 @@ label[for="dateEnd"], label[for="nbEnfant"]{
 }
 
 textarea{
-  background-color: var(--color-background);
+  color: var(--color-text);
+  background-color: var(--color-background-darker);
   width: 100%;
   margin: var(--margin) 0;
+  resize: vertical;
 }
 
 .validerCommandeReservation{
@@ -577,6 +580,16 @@ textarea{
 
 .validerCommandeReservation:hover{
   background: var(--color-button-hover);
+}
+
+.textbox{
+  display: none;
+  font-size:;
+}
+
+#prixSejour{
+  font-weight: bold;
+  font-size: 24px;
 }
 
  /**/
