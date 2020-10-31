@@ -152,6 +152,7 @@ nav > a:hover{
   cursor: pointer;
   width: 100%;
   margin-bottom:10px;
+  transition-duration: var(--transition-time);
 }
 
 .loginContainer > .button:hover{
@@ -167,6 +168,7 @@ nav > a:hover{
   cursor: pointer;
   width: 100%;
   margin-bottom: var(--margin);
+  transition-duration: var(--transition-time);
 }
 
 .loginContainer .buttonCancel:hover{
@@ -192,7 +194,7 @@ header > form input[type=email], header > form input[type=password] {
 /**/
 /**/
 /**/
-/*GESTION DE L'AFFICHAGE DU TRIE PAGE PRINCIPAL*/
+/*GESTION DE L'AFFICHAGE DU TRI PAGE PRINCIPAL*/
 .trie{
   color: var(--color-text);
 }
@@ -255,6 +257,7 @@ button[type="reset"]{
   border: none;
   width: 100%;
   margin-top: var(--margin);
+  transition-duration: var(--transition-time);
 }
 
 button[type="reset"]:hover{
