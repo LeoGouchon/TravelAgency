@@ -17,7 +17,7 @@ fetch("../js/dataVoyage.json") //On récupère la BDD
       //console.log('le Fetch bdd fonctionne');
       allTravels = json; //on renomme la bdd en 'allTravels' qui regroupe tout les voyages
       afficherParametreVoyage(allTravels, ville);
-      //console.log("afficherParametreVoyage"); //Test pour voir si la fonction afficherParametreVoyage fonctionne correctement
+      //console.log("afficherParametreVoyage"); //Test pour voir si la fonction afficherParametreVoyage() fonctionne correctement
       getPrice(allTravels,ville);
       //console.log("getPrice"); //Test pour voir si la fonction getPrice fonctionne correctement
       //console.log(adultPrice);
@@ -111,13 +111,17 @@ function prixTotal(){
    $("#prixSejour").text( prixAdulteDate(getDays()) + prixEnfantDate(getDays()) + dejeune(this));
 }
 
+//
+//
+//
+//FONCTION POUR ENREGISTRER LE VOYAGE DANS SESSIONSTORAGE POUR POUVOIR L'AFFICHER DANS LE PANIER
 function sendInfo(){
   var cartSession = sessionStorage.cart; //On créé une sessionStorage qu'on nomme cartSession
-  if(!cartSession || basketSession=='[]'){
+  if(!cartSession || basketSession=='[]'){ //Si cartSession est vide ou inexistante on rajoute [
     var cart='[';
   }
   else{
-    var cart= cartSession.slice(0,-1)+',';
+    var cart= cartSession.slice(0,-1)+','; //On récupère tout cartSession sauf le dernier caractère (cad "]" qu'on rajoutera plus tard)
   }
   cart += JSON.stringify({
     "ville":document.getElementsByClassName("nomVille")[0].value,
@@ -133,8 +137,7 @@ function sendInfo(){
     "price":prixTotal()
   })+']'
   sessionStorage.setItem('cart', cart);
-  document.location.href="./html/Panier.html";
+  document.location.href="./html/panier.html"; //On renvoie l'utilisateur à la page panier
 }
 
 $(".listenPrixTotal").on("change", prixTotal);
-
