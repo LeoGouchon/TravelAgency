@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <script src="../js/script.js"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <title>NomDestination</title>
+    <title class="title"></title>
   </head>
   <body>
     <header> <!--Haut de page , création du gros de la page, on intègre la navigation au menu-->
@@ -37,7 +37,7 @@
         <!-- afficher dans le javascript -->
       </div>
 
-      <form class="reservation" action="./panier.html" method="post">
+      <form class="reservation" action="sendInfo()" method="post">
         <h2>Réservation</h2>
         <label for="firstName">Prénom* :</label>
         <input class="text" type="text" name="firstName" autocomplete="name"  required autofocus>
@@ -53,17 +53,17 @@
           <input type="date" class="listenPrixTotal" id="dateStart" name="dateStart" onchange="cal() , daysPrice(getDays())" required>
           <label for="dateEnd">Retour* :</label>
           <input type="date" class="listenPrixTotal" id="dateEnd" name="dateEnd" onchange="cal() , daysPrice(getDays())"  required>
-          <label class="form">Nombre de jour:</label>
+          <label class="textbox">Nombre de jour:</label>
           <input type="text" class="textbox" id="numdays" name="numdays"/>
         </div>
 
-        <label for="Billet">Billet pour le prochain grand-prix :</label>
+        <!-- <label for="Billet">Billet pour le prochain grand-prix :</label>
           <select class="Billet">
             <option value="Aucun">Aucun</option>
             <option value="Tribune">Tribune</option>
             <option value="Accès au Paddock">Accès au Paddock</option>
             <option value="VIP">VIP</option>
-          </select>
+          </select> -->
 
         <div class="rangePersonne">
           <label for="nbAdulte">Nombre d'adulte(s)* : <output id="rangevalueAdulte">1</output></label>
@@ -73,9 +73,16 @@
         </div>
 
         <label for="dejeuner">Avec petit déjeuner ?</label>
-        <input type="checkbox" id="terms" value="1" class="listenPrixTotal" />
-        <div class="prix">
+        <input type="checkbox" id="terms" value="1" class="listenPrixTotal"/>
+        <textarea name="information" rows="8" cols="80" placeholder="Un commentaire ou remarque à rajouter ?"></textarea>
+        <div class="prixVoyage">
           <label class="form"> Prix du séjour : <span id="prixSejour"></span>€ </label>
+        </div>
+        <div class="reset">
+          <button type="reset" name="button">Réinitialiser la commande</button>
+        </div>
+        <div class="submit">
+          <input class="validerCommandeReservation" type="submit" value="Valider ma réservation" onclick="sendInfo()">
         </div>
       </form>
     </article>
