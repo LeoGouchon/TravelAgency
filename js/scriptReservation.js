@@ -133,7 +133,7 @@ function sendInfo(){
     "familyName":document.getElementsByName("familyName")[0].value,
     "firstName":document.getElementsByName("firstName")[0].value,
     "ville":ville,
-    "price":document.getElementById("prixSejour").value,
+    "price":prixSejour,
     "email":document.getElementsByName("mail")[0].value,
     "phoneNumber":document.getElementsByName("phoneNumber")[0].value,
     "dateStart":document.getElementsByName("dateStart")[0].value,
