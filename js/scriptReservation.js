@@ -117,7 +117,7 @@ function prixTotal(){
 //FONCTION POUR ENREGISTRER LE VOYAGE DANS SESSIONSTORAGE POUR POUVOIR L'AFFICHER DANS LE PANIER
 function sendInfo(){
   var cartSession = sessionStorage.cart; //On créé une sessionStorage qu'on nomme cartSession
-  if(!cartSession || basketSession=='[]'){ //Si cartSession est vide ou inexistante on rajoute [
+  if(!cartSession || cartSession=='[]'){ //Si cartSession est vide ou inexistante on rajoute [
     var cart='[';
   }
   else{
@@ -137,7 +137,8 @@ function sendInfo(){
     "price":prixTotal()
   })+']'
   sessionStorage.setItem('cart', cart);
-  document.location.href="./html/panier.html"; //On renvoie l'utilisateur à la page panier
+  console.log("senfInfo Click")
+  document.location.href="../html/panier.html"; //On renvoie l'utilisateur à la page panier
 }
 
 $(".listenPrixTotal").on("change", prixTotal);

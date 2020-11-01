@@ -39,7 +39,7 @@
         <!-- afficher dans le javascript -->
       </div>
 
-      <form class="reservation" action="sendInfo()" method="post">
+      <form class="reservation" action="javascript:void(0);" onchange="prixTotal()">
         <h2>Réservation</h2>
         <label for="firstName">Prénom* :</label>
         <input class="text" type="text" name="firstName" autocomplete="name"  required autofocus>
@@ -69,9 +69,9 @@
 
         <div class="rangePersonne">
           <label for="nbAdulte">Nombre d'adulte(s)* : <output id="rangevalueAdulte">1</output></label>
-          <input type="range" name="nbAdulte" class="listenPrixTotal " id="nombreAdulte" min="1" max="10" step="1" value="1" onmousemove="rangevalueAdulte.value=value">
+          <input type="range" name="nbAdulte" class="listenPrixTotal" id="nombreAdulte" min="1" max="10" step="1" value="1" onmousemove="rangevalueAdulte.value=value">
           <label for="nbEnfant">Nombre d'enfant(s)* :  <output id="rangevalueEnfant">0</output></label>
-          <input type="range" name="nbEnfant" class="listenPrixTotal " id="nombreEnfant" min="0" max="10" step="1" value="0" onmousemove="rangevalueEnfant.value=value">
+          <input type="range" name="nbEnfant" class="listenPrixTotal" id="nombreEnfant" min="0" max="10" step="1" value="0" onmousemove="rangevalueEnfant.value=value">
         </div>
 
         <label for="dejeuner">Avec petit déjeuner ?</label>
@@ -94,13 +94,13 @@
             <img src="../data/icon/webSiteLogo.png" alt="Site Web">
           </a>
           <a class="logoReseau" href="https://www.instagram.com/fauxLienInstagram/">
-            <img src="./data/icon/instagramLogo.png" alt="Instagram">
+            <img src="../data/icon/instagramLogo.png" alt="Instagram">
           </a>
           <a class="logoReseau" href="https://www.facebook.com/fauxLienFacebook">
-            <img src="./data/icon/facebookLogo.png" alt="Facebook">
+            <img src="../data/icon/facebookLogo.png" alt="Facebook">
           </a>
           <a class="logoReseau" href="https://twitter.com/fauxLienTwitter">
-            <img src="./data/icon/twitterLogo.png" alt="Twitter">
+            <img src="../data/icon/twitterLogo.png" alt="Twitter">
           </a>
     </footer>
 
