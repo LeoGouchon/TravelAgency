@@ -118,6 +118,13 @@ function sendInfo(){
     var cart='[';
   }
   else{
+    for(var element of JSON.parse(cartSession)){
+      console.log(element);
+      if(element.ville==ville){    //Si il existe une réservation dans la même ville, on renvoie juste à la page panier
+        document.location.href="../html/panier.html";
+        return
+      }
+    }
     var cart= cartSession.slice(0,-1)+','; //On récupère tout cartSession sauf le dernier caractère (cad "]" qu'on rajoutera plus tard)
   }
   cart += JSON.stringify({
@@ -134,8 +141,8 @@ function sendInfo(){
     "enfantNb":parseInt(document.getElementsByName("nbEnfant")[0].value),
   })+']'
   sessionStorage.setItem('cart', cart);
-  console.log("senfInfo Click")
-  document.location.href="../html/panier.html"; //On renvoie l'utilisateur à la page panier
+  //console.log("sendfInfo Click")
+  //document.location.href="../html/panier.html"; //On renvoie l'utilisateur à la page panier
 }
 
 $(".listenPrixTotal").on("change", prixTotal);
