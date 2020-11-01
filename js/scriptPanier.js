@@ -8,7 +8,8 @@ fetch('../js/dataVoyage.json')
     //console.log("fetch called")
     allTravels = data;
     //console.log(allTravels);
-    loadCart(allTravels);
+    loadCart();
+    calcPrice();
   })
 
 function findTravel(allTravels, ville){
@@ -25,15 +26,14 @@ function randomNb(){
   return nb
 }
 
-function loadCart(allTravels){
+function loadCart(){
   //console.log("loadCart called")
   cart = JSON.parse(sessionStorage.cart);
   //console.log(cart);
-  document.getElementsByClassName('blockPrincipal')[0].innerHTML = '';
+  document.getElementsByClassName('listePanier')[0].innerHTML = '';
   for (var element of cart){
     //console.log(element);
-    var travel= findTravel(allTravels, element.ville);
-    document.getElementsByClassName("blockPrincipal")[0].innerHTML +=
+    document.getElementsByClassName("listePanier")[0].innerHTML +=
     `<div class="contourVoyagePanier">
       <div class="boite">
         <div class="voyagePanier">
@@ -49,7 +49,7 @@ function loadCart(allTravels){
             Adulte(s) : `+element.adultNb+`<br>
             Enfant(s) : `+element.enfantNb+`<br>
             </p>
-            <p>Prix du séjour : `+element.price+` </p>
+            <p>Prix du séjour : `+element.price+`€</p>
             <br>
             <p>n° : `+randomNb()+`-`+randomNb()+`-`+randomNb()+`-`+randomNb()+`</p>
           </div>
@@ -65,6 +65,15 @@ function loadCart(allTravels){
       </div>
     </div>`
   }
+}
+
+function calcPrice(){
+  cart = JSON.parse(sessionStorage.cart);
+  var prixPanier=0;
+  for(var element of cart){
+    prixPanier+=element.price;
+  }
+  document.getElementsByClassName("prixPanier")[0].innerHTML+=prixPanier;
 }
 
 function suprVoyage(ville){
