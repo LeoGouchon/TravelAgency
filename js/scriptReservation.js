@@ -9,7 +9,6 @@ var adultPrice = ""; //Maj avec le fetch et la fonction getPrice
 var childPrice = ""; //Maj avec le fetch et la fonction getPrice
 var prixDejeuner = 12;
 
-
 fetch("../js/dataVoyage.json") //On récupère la BDD
   .then(function(response){
       return response.json() //on convert le fichier au format json
@@ -38,18 +37,18 @@ function getPrice(allTravels, ville){
 function afficherParametreVoyage(allTravels, ville){
   for(var travel of allTravels){
     if(ville == travel.ville){
+      document.getElementsByClassName("title")[0].innerHTML += `FastTravel | `+travel.ville;
       document.getElementsByClassName('presentationVoyageReservation')[0].innerHTML +=
         `<img class="imageVilleReservation" src=.`+travel.srcImgVille+` alt="">
          <div class="descriptionReservation">
           <img class="drapeauVilleReservation" src=.`+travel.srcImgDrapeau+` alt="">
-          <h1 class="nomVille">`+travel.ville+`</h1>
+          <h1>`+travel.ville+`</h1>
           <p>`+travel.description+`</p>
           <p style="font-style:italic;"> <br>Ce voyage vous propose une découverte du circuit pendant une matinée ainsi que les billets pour le prochain évènement de formule 1 s'y déroulant.
              FastTravel possède le privilège d'avoir un partenariat avec ce circuit ce qui vous permet d'obtenir des réductions et des offres exclusives
              (il vous suffit d'imprimer les billets obtenus à l'achat pour profiter de l'offre une fois sur place).
           </p>
         </div>`
-      document.getElementsByClassName("title")[0].innerHTML += `FastTravel | `+travel.ville;
     }
   }
 }
@@ -93,12 +92,10 @@ function prixEnfantDate(nombreJour){
 }
 
 function dejeune(checkbox){
-
     if(checkbox.checked){
-        var prixDejeune = (parseInt(document.getElementById("nombreEnfant").value) + parseInt(document.getElementById("nombreAdulte").value))*prixDejeuner * getDays() ;
+        var prixDejeune = (parseInt(document.getElementById("nombreEnfant").value) + parseInt(document.getElementById("nombreAdulte").value))*prixDejeuner*getDays() ;
         return prixDejeune;
     }
-
     else{
         var prixDejeune = 0;
         return prixDejeune;
@@ -107,8 +104,8 @@ function dejeune(checkbox){
 
 function prixTotal(){
    /*  document.getElementById("prixSejour").value = prixAdulteDate(getDays()); */
-/*    document.getElementById("prixSejour").innerText = prixAdulteDate(getDays()) + " $"; */
-   $("#prixSejour").text( prixAdulteDate(getDays()) + prixEnfantDate(getDays()) + dejeune(this));
+   /*    document.getElementById("prixSejour").innerText = prixAdulteDate(getDays()) + " $"; */
+   $("#prixSejour").text(prixAdulteDate(getDays()) + prixEnfantDate(getDays()) + dejeune(this));
 }
 
 //
@@ -124,9 +121,10 @@ function sendInfo(){
     var cart= cartSession.slice(0,-1)+','; //On récupère tout cartSession sauf le dernier caractère (cad "]" qu'on rajoutera plus tard)
   }
   cart += JSON.stringify({
-    "ville":document.getElementsByClassName("nomVille")[0].value,
     "familyName":document.getElementsByName("familyName")[0].value,
     "firstName":document.getElementsByName("firstName")[0].value,
+    "ville":ville,
+    "price":"100",
     "email":document.getElementsByName("mail")[0].value,
     "phoneNumber":document.getElementsByName("phoneNumber")[0].value,
     "dateStart":document.getElementsByName("dateStart")[0].value,
@@ -134,7 +132,6 @@ function sendInfo(){
     "information":document.getElementsByName("information")[0].value,
     "adultNb":parseInt(document.getElementsByName("nbAdulte")[0].value),
     "enfantNb":parseInt(document.getElementsByName("nbEnfant")[0].value),
-    "price":prixTotal()
   })+']'
   sessionStorage.setItem('cart', cart);
   console.log("senfInfo Click")
