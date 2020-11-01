@@ -20,6 +20,11 @@ function findTravel(allTravels, ville){
   }
 }
 
+function randomNb(){
+  var nb = Math.round(9000*Math.random()+1000);
+  return nb
+}
+
 function loadCart(allTravels){
   //console.log("loadCart called")
   cart = JSON.parse(sessionStorage.cart);
@@ -43,9 +48,10 @@ function loadCart(allTravels){
             <p>
             Adulte(s) : `+element.adultNb+`<br>
             Enfant(s) : `+element.enfantNb+`<br>
-            Petit déjeuner : oui/non
             </p>
             <p>Prix du séjour : `+element.price+` </p>
+            <br>
+            <p>n° : `+randomNb()+`-`+randomNb()+`-`+randomNb()+`-`+randomNb()+`</p>
           </div>
           <div class="modification">
             <div class="modifierCommande">

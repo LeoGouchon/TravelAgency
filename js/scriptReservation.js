@@ -8,6 +8,7 @@ var ville = urlSearch.get('destination'); //On récupère la valeur du paramètr
 var adultPrice = ""; //Maj avec le fetch et la fonction getPrice
 var childPrice = ""; //Maj avec le fetch et la fonction getPrice
 var prixDejeuner = 12;
+var prixSejour="";
 
 fetch("../js/dataVoyage.json") //On récupère la BDD
   .then(function(response){
@@ -106,6 +107,7 @@ function prixTotal(){
    /*  document.getElementById("prixSejour").value = prixAdulteDate(getDays()); */
    /*    document.getElementById("prixSejour").innerText = prixAdulteDate(getDays()) + " $"; */
    $("#prixSejour").text(prixAdulteDate(getDays()) + prixEnfantDate(getDays()) + dejeune(this));
+   prixSejour=prixAdulteDate(getDays()) + prixEnfantDate(getDays()) + dejeune(this);
 }
 
 //
@@ -131,7 +133,7 @@ function sendInfo(){
     "familyName":document.getElementsByName("familyName")[0].value,
     "firstName":document.getElementsByName("firstName")[0].value,
     "ville":ville,
-    "price":"100",
+    "price":document.getElementById("prixSejour").value,
     "email":document.getElementsByName("mail")[0].value,
     "phoneNumber":document.getElementsByName("phoneNumber")[0].value,
     "dateStart":document.getElementsByName("dateStart")[0].value,
@@ -142,7 +144,7 @@ function sendInfo(){
   })+']'
   sessionStorage.setItem('cart', cart);
   //console.log("sendfInfo Click")
-  //document.location.href="../html/panier.html"; //On renvoie l'utilisateur à la page panier
+  document.location.href="../html/panier.html"; //On renvoie l'utilisateur à la page panier
 }
 
 $(".listenPrixTotal").on("change", prixTotal);
