@@ -100,15 +100,6 @@
     "temperature":  ""
   },
   {
-    "srcImgVille":"./data/destination/sãopaoloVille.jpg",
-    "srcImgDrapeau":"./data/destination/bresilDrapeau.jpg",
-    "ville":"São Paulo",
-    "prix":"2300",
-    "continent":"ameriqueSud",
-    "description":"",
-    "temperature":  ""
-  },
-  {
     "srcImgVille":"./data/destination/kyalamiVille.jpg",
     "srcImgDrapeau":"./data/destination/afriquesudDrapeau.jpg",
     "ville":"Johannesbourg",
