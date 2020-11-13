@@ -58,7 +58,7 @@ function loadCart(){
               <a class="lienModifierCommande" href="./reservation.html?destination=`+element.ville+`">Modifier cette commande</a>
             </div>
             <div class="suprCommande">
-              <a class="lienSuprCommande" href="#" onclick="suprVoyage()">Supprimer cette commande</a>
+              <a class="lienSuprCommande" href="#" onclick="suprVoyage('`+element.ville+`')">Supprimer cette commande</a>
             </div>
           </div>
         </div>
@@ -80,7 +80,11 @@ function suprVoyage(ville){
   cart = JSON.parse(sessionStorage.cart);
   for(var i in cart){
     if(cart[i].ville==ville){
-      //supprimer le i élément
+      console.log(cart[i]);
+      console.log(cart.splice(i,1));
+      sessionStorage.clear();
+      sessionStorage.setItem('cart', cart);
+      document.location.href="../html/panier.html"; //On renvoie l'utilisateur à la page panier
     }
   }
 }

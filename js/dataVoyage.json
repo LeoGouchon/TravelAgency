@@ -64,7 +64,7 @@
     "temperature":  ""
   },
   {
-    "srcImgVille":"./data/destination/istenbulVille.jpg",
+    "srcImgVille":"./data/destination/istanbulVille.jpg",
     "srcImgDrapeau":"./data/destination/turquieDrapeau.jpg",
     "ville":"Istanbul",
     "prix":"1050",
@@ -100,7 +100,7 @@
     "temperature":  ""
   },
   {
-    "srcImgVille":"./data/destination/kyalamiVille.jpg",
+    "srcImgVille":"./data/destination/johannesbourgVille.jpg",
     "srcImgDrapeau":"./data/destination/afriquesudDrapeau.jpg",
     "ville":"Johannesbourg",
     "prix":"1860",
