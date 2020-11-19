@@ -1,113 +1,111 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="icon" href="/data/icon/airplane.png"/>
-    <script src="../js/script.js"></script>
-    <link rel="stylesheet" href="../css/style.css">
-    <title class="title"></title>
-  </head>
-  <body>
-    <header> <!--Haut de page , création du gros de la page, on intègre la navigation au menu-->
-        <h1 class="nomSite">FastTravel</h1>
-        <nav>
-            <a href = "../index.html">
-                Accueil
-            </a>
-            <a href = "./panier.html">
-                Panier
-            </a>
-            <a href = "./contact.html">
-                Contact
-            </a>
-            <a onclick="openCloseForm()" class="loginButton">Se connecter</a>
-        </nav>
-        <div class="popUpLogin" id="login">
-          <form action="../index.html" class="loginContainer">
-              <h2>Se connecter</h2>
-              <label for="entrerEmail">Email</label>
-              <input type="email" name="email" placeholder="Entrer votre email">
-              <label for="password">Mot de passe</label>
-              <input type="password" name="password" minlength="5" required placeholder="Entrer votre mot de passe">
-              <button type="submit" class="button">Login</button>
-              <button type="submit" class="buttonCancel" onclick="closeForm()">Fermer</button>
-          </form>
-        </div>
-    </header>
-    <article class="blockPrincipal">
-      <div class="presentationVoyageReservation">
-        <!-- afficher dans le javascript -->
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="/data/icon/airplane.png"/>
+  <script src="../js/script.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+  <title class="title"></title>
+</head>
+<body>
+  <header> <!--Haut de page , création du gros de la page, on intègre la navigation au menu-->
+    <h1 class="nomSite">FastTravel</h1>
+    <nav>
+      <a href = "../index.html">
+        Accueil
+      </a>
+      <a href = "./panier.html">
+        Panier
+      </a>
+      <a href = "./contact.html">
+        Contact
+      </a>
+      <a onclick="openCloseForm()" class="loginButton">Se connecter</a>
+    </nav>
+    <div class="popUpLogin" id="login">
+      <form action="../index.html" class="loginContainer">
+        <h2>Se connecter</h2>
+        <label for="entrerEmail">Email</label>
+        <input type="email" name="email" placeholder="Entrer votre email">
+        <label for="password">Mot de passe</label>
+        <input type="password" name="password" minlength="5" required placeholder="Entrer votre mot de passe">
+        <button type="submit" class="button">Login</button>
+        <button type="submit" class="buttonCancel" onclick="closeForm()">Fermer</button>
+      </form>
+    </div>
+  </header>
+  <article class="blockPrincipal">
+    <div class="presentationVoyageReservation">
+      <!-- afficher dans le javascript -->
+    </div>
+
+    <form class="reservation" action="javascript:void(0);">
+      <h2>Réservation</h2>
+      <label for="firstName">Prénom* :</label>
+      <input class="text" type="text" name="firstName" autocomplete="name"  required autofocus>
+      <label for="familyName">Nom* :</label>
+      <input class="text" type="text" name="familyName" autocomplete="family-name" required>
+      <label for="mail">Adresse mail* :</label>
+      <input class="text" type="email" name="mail" required>
+      <label for="phoneNumber">Téléphone :</label>
+      <input class="text" type="tel" name="phoneNumber">
+
+      <div class="dateReservation">
+        <label for="dateStart">Départ* :</label>
+        <input type="date" class="listenPrixTotal" id="dateStart" name="dateStart" onchange="daysCalcul()" required>
+        <label for="dateEnd">Retour* :</label>
+        <input type="date" class="listenPrixTotal" id="dateEnd" name="dateEnd" onchange="daysCalcul()"  required>
       </div>
 
-      <form class="reservation" action="javascript:void(0);">
-        <h2>Réservation</h2>
-        <label for="firstName">Prénom* :</label>
-        <input class="text" type="text" name="firstName" autocomplete="name"  required autofocus>
-        <label for="familyName">Nom* :</label>
-        <input class="text" type="text" name="familyName" autocomplete="family-name" required>
-        <label for="mail">Adresse mail* :</label>
-        <input class="text" type="email" name="mail" required>
-        <label for="phoneNumber">Téléphone :</label>
-        <input class="text" type="tel" name="phoneNumber">
+      <!-- <label for="Billet">Billet pour le prochain grand-prix :</label>
+      <select class="Billet">
+      <option value="Aucun">Aucun</option>
+      <option value="Tribune">Tribune</option>
+      <option value="Accès au Paddock">Accès au Paddock</option>
+      <option value="VIP">VIP</option>
+    </select> -->
 
-        <div class="dateReservation">
-          <label for="dateStart">Départ* :</label>
-          <input type="date" class="listenPrixTotal" id="dateStart" name="dateStart" onchange="daysCalcul()" required>
-          <label for="dateEnd">Retour* :</label>
-          <input type="date" class="listenPrixTotal" id="dateEnd" name="dateEnd" onchange="daysCalcul()"  required>
-        <!--  <label class="textbox">Nombre de jour:</label>
-          <input type="text" class="textbox" id="numdays" name="numdays"/> -->
-        </div>
+    <div class="rangePersonne">
+      <label for="nbAdulte">Nombre d'adulte(s)* : <output id="rangevalueAdulte">1</output></label>
+      <input type="range" name="nbAdulte" class="listenPrixTotal" id="nombreAdulte" min="1" max="10" step="1" value="1" onmousemove="rangevalueAdulte.value=value">
+      <label for="nbEnfant">Nombre d'enfant(s)* :  <output id="rangevalueEnfant">0</output></label>
+      <input type="range" name="nbEnfant" class="listenPrixTotal" id="nombreEnfant" min="0" max="10" step="1" value="0" onmousemove="rangevalueEnfant.value=value">
+    </div>
 
-        <!-- <label for="Billet">Billet pour le prochain grand-prix :</label>
-          <select class="Billet">
-            <option value="Aucun">Aucun</option>
-            <option value="Tribune">Tribune</option>
-            <option value="Accès au Paddock">Accès au Paddock</option>
-            <option value="VIP">VIP</option>
-          </select> -->
+    <label for="dejeuner">Avec petit déjeuner ?</label>
+    <input type="checkbox" id="terms" value="1" class="listenPrixTotal"/>
+    <textarea name="information" rows="8" cols="80" placeholder="Un commentaire ou remarque à rajouter ?"></textarea>
+    <div class="prixVoyage">
+      <label class="form"> Prix du séjour : <span id="prixSejour"></span>€ </label>
+    </div>
+    <div class="reset">
+      <button type="reset" name="button">Réinitialiser la commande</button>
+    </div>
+    <div class="submit">
+      <input class="validerCommandeReservation" type="submit" value="Valider ma réservation" onclick="sendInfo()">
+    </div>
+  </form>
+</article>
 
-        <div class="rangePersonne">
-          <label for="nbAdulte">Nombre d'adulte(s)* : <output id="rangevalueAdulte">1</output></label>
-          <input type="range" name="nbAdulte" class="listenPrixTotal" id="nombreAdulte" min="1" max="10" step="1" value="1" onmousemove="rangevalueAdulte.value=value">
-          <label for="nbEnfant">Nombre d'enfant(s)* :  <output id="rangevalueEnfant">0</output></label>
-          <input type="range" name="nbEnfant" class="listenPrixTotal" id="nombreEnfant" min="0" max="10" step="1" value="0" onmousemove="rangevalueEnfant.value=value">
-        </div>
+<footer> <!--bas de page-->
+  <a class="logoReseau" href ="../index.html">
+    <img src="../data/icon/webSiteLogo.png" alt="Site Web">
+  </a>
+  <a class="logoReseau" href="https://www.instagram.com/fauxLienInstagram/">
+    <img src="../data/icon/instagramLogo.png" alt="Instagram">
+  </a>
+  <a class="logoReseau" href="https://www.facebook.com/fauxLienFacebook">
+    <img src="../data/icon/facebookLogo.png" alt="Facebook">
+  </a>
+  <a class="logoReseau" href="https://twitter.com/fauxLienTwitter">
+    <img src="../data/icon/twitterLogo.png" alt="Twitter">
+  </a>
+</footer>
 
-        <label for="dejeuner">Avec petit déjeuner ?</label>
-        <input type="checkbox" id="terms" value="1" class="listenPrixTotal"/>
-        <textarea name="information" rows="8" cols="80" placeholder="Un commentaire ou remarque à rajouter ?"></textarea>
-        <div class="prixVoyage">
-          <label class="form"> Prix du séjour : <span id="prixSejour"></span>€ </label>
-        </div>
-        <div class="reset">
-          <button type="reset" name="button">Réinitialiser la commande</button>
-        </div>
-        <div class="submit">
-          <input class="validerCommandeReservation" type="submit" value="Valider ma réservation" onclick="sendInfo()">
-        </div>
-      </form>
-    </article>
+<button  id="topbutton" onclick="topFunction()" > &#8593 </button>  <!--creation du bouton pour revenir en haut de page-->
+<script src="../js/script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../js/scriptReservation.js"></script>
 
-    <footer> <!--bas de page-->
-          <a class="logoReseau" href ="../index.html">
-            <img src="../data/icon/webSiteLogo.png" alt="Site Web">
-          </a>
-          <a class="logoReseau" href="https://www.instagram.com/fauxLienInstagram/">
-            <img src="../data/icon/instagramLogo.png" alt="Instagram">
-          </a>
-          <a class="logoReseau" href="https://www.facebook.com/fauxLienFacebook">
-            <img src="../data/icon/facebookLogo.png" alt="Facebook">
-          </a>
-          <a class="logoReseau" href="https://twitter.com/fauxLienTwitter">
-            <img src="../data/icon/twitterLogo.png" alt="Twitter">
-          </a>
-    </footer>
-
-    <button  id="topbutton" onclick="topFunction()" > &#8593 </button>  <!--creation du bouton pour revenir en haut de page-->
-    <script src="../js/script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../js/scriptReservation.js"></script>
-
-  </body>
+</body>
 </html>

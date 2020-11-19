@@ -563,6 +563,10 @@ button[type="reset"]:hover{
   color: var(--color-text);
 }
 
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
 .reservation>input, .reservation>.dateReservation, .reservation>select{
   margin-bottom: var(--margin);
 }
