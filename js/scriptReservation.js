@@ -71,8 +71,8 @@ function daysCalcul(){
   var numberDays = getDays();
   var noError = "noError";
 
-  if (numberDays < 0){
-    dateRetour.value="";
+  if (dateRetour<dateDepart){
+    dateEnd.value="";
     return
   }
   if (dateDepart<dateJour){
@@ -80,7 +80,7 @@ function daysCalcul(){
     return
   }
   if(dateRetour<dateJour){
-    dateRetour.value="";
+    dateEnd.value="";
     return
   }
   return noError //Si on atteint ce return, le prix rentré par l'utilsateur ne rencontre pas de problème particulier
