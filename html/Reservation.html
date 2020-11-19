@@ -52,11 +52,11 @@
 
         <div class="dateReservation">
           <label for="dateStart">Départ* :</label>
-          <input type="date" class="listenPrixTotal" id="dateStart" name="dateStart" onchange="cal() , daysPrice(getDays())" required>
+          <input type="date" class="listenPrixTotal" id="dateStart" name="dateStart" onchange="daysCalcul()" required>
           <label for="dateEnd">Retour* :</label>
-          <input type="date" class="listenPrixTotal" id="dateEnd" name="dateEnd" onchange="cal() , daysPrice(getDays())"  required>
-          <label class="textbox">Nombre de jour:</label>
-          <input type="text" class="textbox" id="numdays" name="numdays"/>
+          <input type="date" class="listenPrixTotal" id="dateEnd" name="dateEnd" onchange="daysCalcul()"  required>
+        <!--  <label class="textbox">Nombre de jour:</label>
+          <input type="text" class="textbox" id="numdays" name="numdays"/> -->
         </div>
 
         <!-- <label for="Billet">Billet pour le prochain grand-prix :</label>

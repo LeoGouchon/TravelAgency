@@ -54,27 +54,27 @@ function afficherParametreVoyage(allTravels, ville){
   }
 }
 
-//On peut fusionner cette fonction avec daysPrice()
+//Return le nbr de jour
 function getDays(){
     var dateEnd = new Date(document.getElementById("dateEnd").value);
     var dateStart = new Date(document.getElementById("dateStart").value);
     return parseInt((dateEnd - dateStart) / (24 * 3600 * 1000));
 }
 
-//function cal(){
-//    if(document.getElementById("dateEnd")){
-//       document.getElementById("numdays").value=getDays();
-//    }
-//}
+function cal(){
+    if(document.getElementById("dateEnd")){
+       document.getElementById("numdays").value=getDays();
+    }
+}
 
 //Fonction qui vérifie si les dates de départ et d'arrivé rentré par l'utilisateur rencontre des problèmes
 //Output : noError si il n'y a aucun problème
 //         ne return rien si il y a un problème
-function daysPrice(numberDays){
-    var dateDepart =new Date(document.getElementById("dateStart").value) ;
+function daysCalcul(){
+    var dateDepart =new Date(document.getElementById("dateStart").value);
     var dateRetour = new Date (document.getElementById("dateEnd").value);
     var dateJour = new Date();
-
+    var numberDays = getDays();
     var noError = "noError";
 
     if (numberDays < 0){
@@ -126,7 +126,7 @@ function prixTotal(){
 //FONCTION POUR ENREGISTRER LE VOYAGE DANS SESSIONSTORAGE POUR POUVOIR L'AFFICHER DANS LE PANIER
 function sendInfo(){
   var numDays = getElementById("numdays");
-  if(daysPrice(numDays)=="noError"){
+  if(daysCalcul(numDays)=="noError"){
     var cartSession = sessionStorage.cart; //On créé une sessionStorage qu'on nomme cartSession
     if(!cartSession || cartSession=='[]'){ //Si cartSession est vide ou inexistante on rajoute [
       var cart='[';
@@ -158,9 +158,9 @@ function sendInfo(){
     //console.log("sendfInfo Click")
     document.location.href="../html/panier.html"; //On renvoie l'utilisateur à la page panier
   }
-  //Si il y a un problème de date, on rejoue la fonction daysPrice() pour ré-indiquer à l'utilisateur l'erreur
+  //Si il y a un problème de date, on rejoue la fonction daysCalcul() pour ré-indiquer à l'utilisateur l'erreur
   else{
-    daysPrice(numDays);
+    daysCalcul(numDays);
   }
 }
 
