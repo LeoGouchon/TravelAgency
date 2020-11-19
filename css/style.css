@@ -629,7 +629,7 @@ textarea{
 
 .textbox{
   display: none;
-  font-size:;
+  /*font-size:;*/
 }
 
 #prixSejour{
@@ -764,4 +764,42 @@ footer{
 
 footer > a {
   text-decoration: none;
+}
+
+/*Gestion de la map monde */
+.map_image{
+  width: 50%;
+ float: left;
+}
+.map_list{
+  float: right;
+  
+  margin-top: 10%;
+  
+  
+}
+.map_image path{
+  fill: #3f4042; 
+  stroke-width: 05px;
+
+}
+
+#destination_voyage{
+  fill:  var(--color-button);
+  transition: fill 0.3s;
+}
+#destination_voyage:hover{
+  fill:  var( --color-button-hover) ;
+}
+
+.map_list a{
+  font-weight: 600;
+  text-decoration: none;
+  transition : color 0.3s;
+  color: var(--color-text) ;
+}
+
+.map_list a:hover{
+  color: var( --color-button-hover);
+
 }
