@@ -10,7 +10,7 @@ fetch("./js/dataVoyage.json")
   //console.log('le Fetch bdd fonctionne');
   allTravels = json; //on renomme la bdd en 'allTravels' qui regroupe tout les voyages
   //for(travel of allTravels){ console.log(travel);}
-  applyFilter();
+  initialiseVoyage(allTravels);
   //console.log('fini de initialiser')
 });
 
@@ -19,22 +19,26 @@ fetch("./js/dataVoyage.json")
 //TRIE DES VOYAGES
 function applyFilter(){
   //On créé un array qui contient tout les éléments qui correspondent aux choix de l'utilisateur
-  var selectTravels = allTravels;
-  //console.log(selectTravels);
+  console.log("allTravels");
+  console.log(allTravels);
+  var selectTravels = AIDEZ MOI SVP; //On copie la bdd entière
+  console.log("selectTravels");
+  console.log(selectTravels);
   //1- Regarder le continent choisi dans le tri
   var listContinents = document.getElementsByClassName("continents")[0];
   var selectContinent = listContinents.options[listContinents.selectedIndex].value;
-  //console.log(selectContinent);
+  console.log(selectContinent);
   if(selectContinent!="tousContinents"){
     console.log(selectTravels);
-    for(i in selectTravels){
-      //Si le continent du pays est différent de celui de l'input de trie, on l'enlève des voyages à afficher
-      if(selectTravels[i].continent!=selectContinent){
-        selectTravels.splice(i,1);
-        console.log(selectTravels);
+    for(travel of selectTravels){
+      console.log(`on regarde `+travel.ville+``);
+      if(travel.continent!=selectContinent){
+        console.log(`on supprime `+travel.ville+``);
+        selectTravels.splice(selectTravels.indexOf(travel),1);
+        }
       }
     }
-  }
+  console.log(selectTravels);
   //2- Regarder le prix le plus bas choisi
   var selectLowPrice = document.getElementsByClassName("lowPrice")[0].value;
   for(i in selectTravels){
