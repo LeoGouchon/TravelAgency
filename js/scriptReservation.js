@@ -54,41 +54,51 @@ function afficherParametreVoyage(allTravels, ville){
   }
 }
 
+//On peut fusionner cette fonction avec daysPrice()
 function getDays(){
     var dateEnd = new Date(document.getElementById("dateEnd").value);
     var dateStart = new Date(document.getElementById("dateStart").value);
     return parseInt((dateEnd - dateStart) / (24 * 3600 * 1000));
 }
 
-function cal(){
-    if(document.getElementById("dateEnd")){
-       document.getElementById("numdays").value=getDays();
-    }
-}
+//function cal(){
+//    if(document.getElementById("dateEnd")){
+//       document.getElementById("numdays").value=getDays();
+//    }
+//}
 
+//Fonction qui vérifie si les dates de départ et d'arrivé rentré par l'utilisateur rencontre des problèmes
+//Output : noError si il n'y a aucun problème
+//         ne return rien si il y a un problème
 function daysPrice(numberDays){
     var dateDepart =new Date(document.getElementById("dateStart").value) ;
     var dateRetour = new Date (document.getElementById("dateEnd").value);
     var dateJour = new Date();
 
+    var noError = "noError";
+
     if (numberDays < 0){
         window.alert("Votre date de retour est plus tôt que celle de retour")
+        return
     }
     if (dateDepart<dateJour){
         window.alert("votre date de depart est passée, veuillez saisir une date a venir")
+        return
     }
     if(dateRetour<dateJour){
         window.alert("votre date de retour est passée, veuillez saisir une date a venir")
+        return
     }
+    return noError //Si on atteint ce return, le prix rentré par l'utilsateur ne rencontre pas de problème particulier
 }
 
-function prixAdulteDate(nombreJour){
-    var prixDateAdulte = nombreJour*document.getElementById("nombreAdulte").value*adultPrice;
+function prixAdulteDate(numberDays){
+    var prixDateAdulte = numberDays*document.getElementById("nombreAdulte").value*adultPrice;
     return prixDateAdulte;
 }
 
-function prixEnfantDate(nombreJour){
-    var prixDateEnfant = nombreJour*document.getElementById("nombreEnfant").value*childPrice;
+function prixEnfantDate(numberDays){
+    var prixDateEnfant = numberDays*document.getElementById("nombreEnfant").value*childPrice;
     return prixDateEnfant;
 }
 
@@ -115,36 +125,44 @@ function prixTotal(){
 //
 //FONCTION POUR ENREGISTRER LE VOYAGE DANS SESSIONSTORAGE POUR POUVOIR L'AFFICHER DANS LE PANIER
 function sendInfo(){
-  var cartSession = sessionStorage.cart; //On créé une sessionStorage qu'on nomme cartSession
-  if(!cartSession || cartSession=='[]'){ //Si cartSession est vide ou inexistante on rajoute [
-    var cart='[';
-  }
-  else{
-    for(var element of JSON.parse(cartSession)){
-      console.log(element);
-      if(element.ville==ville){    //Si il existe une réservation dans la même ville, on renvoie juste à la page panier
-        document.location.href="../html/panier.html";
-        return
-      }
+  var numDays = getElementById("numdays");
+  if(daysPrice(numDays)=="noError"){
+    var cartSession = sessionStorage.cart; //On créé une sessionStorage qu'on nomme cartSession
+    if(!cartSession || cartSession=='[]'){ //Si cartSession est vide ou inexistante on rajoute [
+      var cart='[';
     }
-    var cart= cartSession.slice(0,-1)+','; //On récupère tout cartSession sauf le dernier caractère (cad "]" qu'on rajoutera plus tard)
+    else{
+      for(var element of JSON.parse(cartSession)){
+        console.log(element);
+        if(element.ville==ville){    //Si il existe une réservation dans la même ville, on renvoie juste à la page panier
+          document.location.href="../html/panier.html";
+          return
+        }
+      }
+      var cart= cartSession.slice(0,-1)+','; //On récupère tout cartSession sauf le dernier caractère (cad "]" qu'on rajoutera plus tard)
+    }
+    cart += JSON.stringify({
+      "familyName":document.getElementsByName("familyName")[0].value,
+      "firstName":document.getElementsByName("firstName")[0].value,
+      "ville":ville,
+      "price":prixSejour,
+      "email":document.getElementsByName("mail")[0].value,
+      "phoneNumber":document.getElementsByName("phoneNumber")[0].value,
+      "dateStart":document.getElementsByName("dateStart")[0].value,
+      "dateEnd":document.getElementsByName("dateEnd")[0].value,
+      "information":document.getElementsByName("information")[0].value,
+      "adultNb":parseInt(document.getElementsByName("nbAdulte")[0].value),
+      "enfantNb":parseInt(document.getElementsByName("nbEnfant")[0].value),
+    })+']'
+    sessionStorage.setItem('cart', cart);
+    //console.log("sendfInfo Click")
+    document.location.href="../html/panier.html"; //On renvoie l'utilisateur à la page panier
   }
-  cart += JSON.stringify({
-    "familyName":document.getElementsByName("familyName")[0].value,
-    "firstName":document.getElementsByName("firstName")[0].value,
-    "ville":ville,
-    "price":prixSejour,
-    "email":document.getElementsByName("mail")[0].value,
-    "phoneNumber":document.getElementsByName("phoneNumber")[0].value,
-    "dateStart":document.getElementsByName("dateStart")[0].value,
-    "dateEnd":document.getElementsByName("dateEnd")[0].value,
-    "information":document.getElementsByName("information")[0].value,
-    "adultNb":parseInt(document.getElementsByName("nbAdulte")[0].value),
-    "enfantNb":parseInt(document.getElementsByName("nbEnfant")[0].value),
-  })+']'
-  sessionStorage.setItem('cart', cart);
-  //console.log("sendfInfo Click")
-  document.location.href="../html/panier.html"; //On renvoie l'utilisateur à la page panier
+  //Si il y a un problème de date, on rejoue la fonction daysPrice() pour ré-indiquer à l'utilisateur l'erreur
+  else{
+    daysPrice(numDays);
+  }
 }
+
 
 $(".listenPrixTotal").on("change", prixTotal);
