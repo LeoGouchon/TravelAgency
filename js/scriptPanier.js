@@ -46,6 +46,7 @@ function loadCart(){
           </div>
           <div class="complement">
             <p>
+            Nom réservation : `+element.firstName+` `+element.familyName+`<br>
             Adulte(s) : `+element.adultNb+`<br>
             Enfant(s) : `+element.enfantNb+`<br>
             </p>
@@ -81,10 +82,11 @@ function suprVoyage(ville){
   for(var i in cart){
     if(cart[i].ville==ville){
       console.log(cart[i]);
-      console.log(cart.splice(i,1));
-      sessionStorage.clear();
+      cart.splice(i,1);
       sessionStorage.setItem('cart', cart);
-      document.location.href="../html/panier.html"; //On renvoie l'utilisateur à la page panier
+      console.log(cart);
+      loadCart();
+      //document.location.href="../html/panier.html"; //On renvoie l'utilisateur à la page panier
     }
   }
 }
