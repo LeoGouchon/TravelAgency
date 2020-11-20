@@ -21,52 +21,65 @@ function applyFilter(){
   //On créé un array qui contient tout les éléments qui correspondent aux choix de l'utilisateur
   console.log("allTravels");
   console.log(allTravels);
-  var selectTravels = AIDEZ MOI SVP; //On copie la bdd entière
+  var selectTravels = allTravels.slice(); //On copie la bdd entière
   console.log("selectTravels");
   console.log(selectTravels);
   //1- Regarder le continent choisi dans le tri
   var listContinents = document.getElementsByClassName("continents")[0];
   var selectContinent = listContinents.options[listContinents.selectedIndex].value;
   console.log(selectContinent);
+  del = [];
   if(selectContinent!="tousContinents"){
     console.log(selectTravels);
     for(travel of selectTravels){
       console.log(`on regarde `+travel.ville+``);
       if(travel.continent!=selectContinent){
         console.log(`on supprime `+travel.ville+``);
-        selectTravels.splice(selectTravels.indexOf(travel),1);
+        del.includes(selectTravels.indexOf(travel)) ? console.log("a") : del.push(selectTravels.indexOf(travel));
         }
       }
     }
+    // selectTravels.splice(selectTravels.indexOf(travel),1);
   console.log(selectTravels);
   //2- Regarder le prix le plus bas choisi
   var selectLowPrice = document.getElementsByClassName("lowPrice")[0].value;
-  for(i in selectTravels){
+  for(travel of allTravels){
     //Si le prix est plus bas que celui dans le l'input de tri, on enlève le voyage
-    if(selectTravels[i].prix<=selectLowPrice){
-      selectTravels.splice(i,1);
+    if(parseInt(travel.prix)<=parseInt(selectLowPrice)){
+      del.includes(selectTravels.indexOf(travel)) ? console.log("a") : del.push(selectTravels.indexOf(travel));
       //console.log("trie prix bas");
       //console.log(selectTravels);
     }
   }
   //3- Regarder le prix le plus haut choisi*
   var selectHighPrice = document.getElementsByClassName("highPrice")[0].value;
-  for(i in selectTravels){
+  for(travel of selectTravels){
     //Si le prix est plus élevé que celui dans le l'input de tri, on enlève le voyage
-    if(selectTravels[i].prix>=selectHighPrice){
-      selectTravels.splice(i,1);
+    if(parseInt(travel.prix)>parseInt(selectHighPrice)){
+      console.log("//3");
+      del.includes(selectTravels.indexOf(travel)) ? console.log("a") : del.push(selectTravels.indexOf(travel));
       //console.log("trie prix haut");
       //console.log(selectTravels);
     }
   }
+
+
+  del.sort(function(a, b) {return a - b}).reverse(); //Trie par ordre croissant les index des voyages à supr
+    console.log(del);
+  for (i of del){
+    selectTravels.splice(i,1);
+  }
+  selectTravels.sort(function(a, b) {return parseInt(a.prix) - parseInt(b.prix)}); //Trie les voyages par ordre croissant de prix
   //4- Afficher la liste correspondant à tout les critères
-  console.log(selectTravels)
+  document.getElementsByClassName('sectionArticle')[0].innerHTML ='';
+  console.log(selectTravels);
   initialiseVoyage(selectTravels);
 }
 
 //
 //output : détermine la température de chaque voyage
 function initialiseVoyage(listTravels){
+  console.log(listTravels);
   for(travel of listTravels){   //On parcours le fichier json voyage par voyage
     weatherInfo(travel.ville);  //On va chercher la température pour tous les travels de listTravels
     //console.log('fin du for weatherInfo');
