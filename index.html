@@ -52,9 +52,9 @@
                           <option value = "oceanie">Océanie</option>
                       </select>
                       <label for ="prixMin">min. </label>
-                      <input class="lowPrice" type="number" name="prixMin" value="0" min="0" step="100" onkeyup="applyFilter()">
+                      <input class="lowPrice" type="number" name="prixMin" value="0" min="0" step="100" onchange="applyFilter()">
                       <label for ="prixMax">max. </label>
-                      <input class="highPrice" type="number" name="prixMax" value="5000" min="0" step="100" onkeyup="applyFilter()">
+                      <input class="highPrice" type="number" name="prixMax" value="5000" min="0" step="100" onchange="applyFilter()">
                   <div class = "reset">
                       <button type="reset" onclick="applyFilter()">Rénitialiser</button>
                   </div>
