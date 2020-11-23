@@ -62,11 +62,11 @@ header{
 }
 
 nav{
-    margin: var(--margin) 0;
-    padding: 10px 20px;
-    display: inline-block;
-    text-align: right;
-    float: right;
+  margin: var(--margin) 0;
+  padding: 10px 20px;
+  display: inline-block;
+  text-align: right;
+  
 }
 
 nav > a{
@@ -629,7 +629,6 @@ textarea{
 
 .textbox{
   display: none;
-  font-size:;
 }
 
 #prixSejour{
