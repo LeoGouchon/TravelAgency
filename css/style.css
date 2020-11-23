@@ -10,7 +10,7 @@
 :root{
   --color-background: #232427;
   --color-background-darker: #1C1C1F;
-  --color-background-lighter: #292a2e ;
+  --color-background-lighter: #292a2e;
   --color-shadow: #0e0f0f;
   --color-light: #3e4046;
   --color-button: #2196f3;
@@ -66,7 +66,7 @@ nav{
   padding: 10px 20px;
   display: inline-block;
   text-align: right;
-  
+  float: right ;
 }
 
 nav > a{
@@ -629,10 +629,6 @@ textarea{
 
 .textbox{
   display: none;
-<<<<<<< HEAD
-=======
-  /*font-size:;*/
->>>>>>> d96f9f812f409ad82a72178533a424c65a0b5089
 }
 
 #prixSejour{
@@ -767,67 +763,4 @@ footer{
 
 footer > a {
   text-decoration: none;
-}
-
-/*GESTION AFFICHAGE MAP MONDE*/
-.contourMap{
-  position: relative;
-  min-width: 300px;
-  height: 730px;
-  box-shadow: inset 5px 5px 5px var(--color-shadow);
-  box-shadow: inset -5px -5px -5px var(--color-light);
-  box-shadow: 5px 5px 15px var(--color-shadow);
-  box-shadow: -5px -5px 15px var(--color-light);
-  border-radius: 15px;
-  margin: calc(3* var(--margin));
-}
-
-.boiteMap{
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  padding:10px 10px;
-  background: linear-gradient(90deg, var(--color-background-lighter) 50%, var(--color-background) 50%);
-  border: 2px solid #1e1f23;
-  border-radius: 15px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-  overflow: hidden;
-  transition-duration: var(--transition-time);
-}
-
-
-.mapImage{
-  width: 100%;
-  margin-left:15px;
-}
-
-.mapList{
-  margin-top: 10%;
-}
-
-.mapImage{
-  fill: var(--color-background-darker);
-  stroke-width: 5px;
-}
-
-.destinationVoyage{
-  fill:  var(--color-button);
-  transition: fill 0.3s;
-}
-
-.destinationVoyage:hover{
-  fill:  var( --color-button-hover) ;
-}
-
-.mapList a{
-  font-weight: 600;
-  text-decoration: none;
-  transition : color var(--transition-time);
-  color: var(--color-text) ;
-}
-
-.mapList a:hover{
-  color: var( --color-button-hover);
 }
