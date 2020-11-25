@@ -61,6 +61,7 @@ function getDays(){
   return parseInt((dateEnd - dateStart) / (24 * 3600 * 1000));
 }
 
+
 //Fonction qui vérifie si les dates de départ et d'arrivé rentré par l'utilisateur rencontre des problèmes
 //Output : noError si il n'y a aucun problème
 //         ne return rien si il y a un problème
@@ -68,7 +69,6 @@ function daysCalcul(){
   var dateDepart =new Date(document.getElementById("dateStart").value);
   var dateRetour = new Date (document.getElementById("dateEnd").value);
   var dateJour = new Date();
-  var numberDays = getDays();
   var noError = "noError";
 
   if (dateRetour<dateDepart){
