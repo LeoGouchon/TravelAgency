@@ -61,14 +61,6 @@
         <input type="date" class="listenPrixTotal" id="dateEnd" name="dateEnd" onchange="daysCalcul()"  required>
       </div>
 
-      <!-- <label for="Billet">Billet pour le prochain grand-prix :</label>
-      <select class="Billet">
-      <option value="Aucun">Aucun</option>
-      <option value="Tribune">Tribune</option>
-      <option value="Accès au Paddock">Accès au Paddock</option>
-      <option value="VIP">VIP</option>
-    </select> -->
-
     <div class="rangePersonne">
       <label for="nbAdulte">Nombre d'adulte(s)* : <output id="rangevalueAdulte">1</output></label>
       <input type="range" name="nbAdulte" class="listenPrixTotal" id="nombreAdulte" min="1" max="10" step="1" value="1" onmousemove="rangevalueAdulte.value=value">
@@ -86,7 +78,7 @@
       <button type="reset" name="button">Réinitialiser la commande</button>
     </div>
     <div class="submit">
-      <input class="validerCommandeReservation" href="" type="submit" value="Valider ma réservation" onclick="sendInfo()">
+      <input class="validerCommandeReservation" type="submit" value="Valider ma réservation" onclick="sendInfo()">
     </div>
   </form>
 </article>

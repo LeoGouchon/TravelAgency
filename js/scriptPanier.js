@@ -52,7 +52,7 @@ function loadCart(){
             </p>
             <p>Prix du séjour : `+element.price+`€</p>
             <br>
-            <p>n° : `+randomNb()+`-`+randomNb()+`-`+randomNb()+`-`+randomNb()+`</p>
+            <p>n° : `+element.code+`</p>
           </div>
           <div class="modification">
             <div class="modifierCommande">
