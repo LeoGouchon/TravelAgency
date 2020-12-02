@@ -43,7 +43,7 @@
       <!-- afficher dans le javascript -->
     </div>
 
-    <form class="reservation" action="javascript:void(0);">
+    <form class="reservation" action="javascript:void(0);" onsubmit="sendInfo()">
       <h2>Réservation</h2>
       <label for="firstName">Prénom* :</label>
       <input class="text" type="text" name="firstName" autocomplete="name"  required autofocus>
@@ -78,7 +78,7 @@
       <button type="reset" name="button">Réinitialiser la commande</button>
     </div>
     <div class="submit">
-      <input class="validerCommandeReservation" type="submit" value="Valider ma réservation" onclick="sendInfo()">
+      <input class="validerCommandeReservation" type="submit" value="Valider ma réservation">
     </div>
   </form>
 </article>
