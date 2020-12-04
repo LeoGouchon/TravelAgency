@@ -14,6 +14,7 @@ fetch("./js/dataVoyage.json")
   //console.log('fini de initialiser')
 });
 
+
 //
 //
 //TRIE DES VOYAGES

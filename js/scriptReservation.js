@@ -73,6 +73,7 @@ function daysCalcul(){
 
   if (dateRetour<dateDepart){
     dateEnd.value="";
+    
     return
   }
   if (dateDepart<dateJour){
@@ -110,7 +111,7 @@ function dejeune(checkbox){
 function prixTotal(){
   /*  document.getElementById("prixSejour").value = prixAdulteDate(getDays()); */
   /*    document.getElementById("prixSejour").innerText = prixAdulteDate(getDays()) + " $"; */
-  $("#prixSejour").text(prixAdulteDate(getDays()) + prixEnfantDate(getDays()) + dejeune(this));
+  $("#prixSejour").text(prixAdulteDate(getDays()) + prixEnfantDate(getDays()) + dejeune(this)); /*utilisation de Jquery pour simplifier l'écriture */
   prixSejour=prixAdulteDate(getDays()) + prixEnfantDate(getDays()) + dejeune(this);
 }
 
