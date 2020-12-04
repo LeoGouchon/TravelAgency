@@ -111,6 +111,7 @@ nav > a:hover{
 .loginContainer > label{
   color: var(--color-text);
   font-stretch: extra-expanded;
+  
 }
 
 /*Button du nav qui n'a pas explicitement de lien, on fait croire au curseur qu'il en a*/
@@ -125,6 +126,7 @@ nav > a:hover{
   margin-bottom: var(--margin);
   opacity: 0.8;
   border-radius: 50px;
+  outline: none;
   color : var(--color-text);
   background: var(--color-background-darker);
   box-shadow: inset 20px 20px 60px var(--color-shadow),
@@ -149,6 +151,7 @@ nav > a:hover{
   background: var(--color-button);
   padding: 16px 20px;
   border: none;
+  outline: none;
   cursor: pointer;
   width: 100%;
   margin-bottom:10px;
@@ -165,6 +168,7 @@ nav > a:hover{
   background: var(--color-button-danger);
   padding: 16px 20px;
   border: none;
+  outline: none;
   cursor: pointer;
   width: 100%;
   margin-bottom: var(--margin);
@@ -207,6 +211,13 @@ header > form input[type=email], header > form input[type=password] {
   justify-content: center;
 }
 
+.lowPrice{
+  outline: none;
+}
+.highPrice{
+  outline:none;
+}
+
 label[for="contients"]{
   grid-area: 1 / 1 / 2 / 2;
 }
@@ -226,8 +237,9 @@ label[for="prixMax"]{
   grid-area: 2 / 3 / 3 / 4;
 }
 .formTrie>button[type="reset"]{
-  grid-area: 2 / 4 / 3 / 5;
+    grid-area: 2 / 4 / 3 / 5;
 }
+.
 
 .formTrie > label{
   margin: 0 var(--margin);
@@ -254,6 +266,7 @@ button[type="reset"]{
   background: var(--color-button-danger);
   color: var(--color-text);
   padding: 10px 10px;
+  outline: none;
   border: none;
   width: 100%;
   margin-top: var(--margin);
@@ -616,6 +629,7 @@ textarea{
   border-radius: 50px;
   width: 100%;
   background: var(--color-button);
+  outline: none;
   padding: 10px 10px;
   border: none;
   margin: var(--margin) 0;
