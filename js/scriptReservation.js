@@ -61,6 +61,7 @@ function getDays(){
   return parseInt((dateEnd - dateStart) / (24 * 3600 * 1000));
 }
 
+
 //Fonction qui vérifie si les dates de départ et d'arrivé rentré par l'utilisateur rencontre des problèmes
 //Output : noError si il n'y a aucun problème
 //         ne return rien si il y a un problème
@@ -68,7 +69,6 @@ function daysCalcul(){
   var dateDepart =new Date(document.getElementById("dateStart").value);
   var dateRetour = new Date (document.getElementById("dateEnd").value);
   var dateJour = new Date();
-  var numberDays = getDays();
   var noError = "noError";
 
   if (dateRetour<dateDepart){
@@ -146,12 +146,21 @@ function sendInfo(){
     "information":document.getElementsByName("information")[0].value,
     "adultNb":parseInt(document.getElementsByName("nbAdulte")[0].value),
     "enfantNb":parseInt(document.getElementsByName("nbEnfant")[0].value),
+    "code":randomNb()+`-`+randomNb()+`-`+randomNb()+`-`+randomNb()
   })+']'
   sessionStorage.setItem('cart', cart);
   //console.log("sendfInfo Click")
   document.location.href="../html/panier.html"; //On renvoie l'utilisateur à la page panier
 }
 
+//
+//
+//
+//FONCTION QUI RETOURNE UN NBR COMPRIS ENTRE 1000 ET 9999
+function randomNb(){
+  var nb = Math.round(9000*Math.random()+1000);
+  return nb
+}
 
 
 $(".listenPrixTotal").on("change", prixTotal);

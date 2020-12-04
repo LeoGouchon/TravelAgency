@@ -21,10 +21,6 @@ function findTravel(allTravels, ville){
   }
 }
 
-function randomNb(){
-  var nb = Math.round(9000*Math.random()+1000);
-  return nb
-}
 
 function loadCart(){
   //console.log("loadCart called")
@@ -52,7 +48,7 @@ function loadCart(){
             </p>
             <p>Prix du séjour : `+element.price+`€</p>
             <br>
-            <p>n° : `+randomNb()+`-`+randomNb()+`-`+randomNb()+`-`+randomNb()+`</p>
+            <p>n° : `+element.code+`</p>
           </div>
           <div class="modification">
             <div class="modifierCommande">
