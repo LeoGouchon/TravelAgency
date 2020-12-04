@@ -3,7 +3,7 @@
     "srcImgVille": "./data/destination/monzaVille.jpg",
     "srcImgDrapeau": "./data/destination/italieDrapeau.jpg",
     "ville":"Monza",
-    "prix":"449",
+    "prix":"56",
     "pays":"Italie",
     "continent":"europe",
     "description":"Cette magnifique petite ville italienne cache un des circuits les plus rapides de F1. Redécouvrez les victoires et défaites des plus grand pilotes de formule à travers notre séjour dans un des berceaux du sport automobile.",
@@ -13,7 +13,7 @@
     "srcImgVille":"./data/destination/spielbergVille.jpg",
     "srcImgDrapeau":"./data/destination/autricheDrapeau.jpg",
     "ville":"Spielberg",
-    "prix":"649",
+    "prix":"80",
     "continent":"europe",
     "description":"Découvrez un des circuits les plus appréciés des pilotes. Caché dans les montagnes autrichiennes, ce lieu vous fera voyager entre nature et automobile.",
     "temperature":  ""
@@ -22,7 +22,7 @@
     "srcImgVille":"./data/destination/budapestVille.jpg",
     "srcImgDrapeau":"./data/destination/hongrieDrapeau.jpg",
     "ville":"Budapest",
-    "prix":"599",
+    "prix":"60",
     "continent":"europe",
     "description":"",
     "temperature":  ""
@@ -31,7 +31,7 @@
     "srcImgVille":"./data/destination/monacoVille.jpg",
     "srcImgDrapeau":"./data/destination/monacoDrapeau.jpg",
     "ville":"Monaco",
-    "prix":"1000",
+    "prix":"152",
     "continent":"europe",
     "description":"",
     "temperature":  ""
@@ -40,7 +40,7 @@
     "srcImgVille":"./data/destination/mexicoVille.jpg",
     "srcImgDrapeau":"./data/destination/mexiqueDrapeau.jpg",
     "ville":"Mexico",
-    "prix":"2450",
+    "prix":"51",
     "continent":"ameriqueSud",
     "description":"",
     "temperature":  ""
@@ -49,7 +49,7 @@
     "srcImgVille":"./data/destination/barceloneVille.jpg",
     "srcImgDrapeau":"./data/destination/espagneDrapeau.jpg",
     "ville":"Barcelone",
-    "prix":"480",
+    "prix":"62",
     "continent":"europe",
     "description":"",
     "temperature":  ""
@@ -58,7 +58,7 @@
     "srcImgVille":"./data/destination/suzukaVille.jpg",
     "srcImgDrapeau":"./data/destination/japonDrapeau.jpg",
     "ville":"Suzuka",
-    "prix":"3150",
+    "prix":"65",
     "continent":"asie",
     "description":"",
     "temperature":  ""
@@ -67,7 +67,7 @@
     "srcImgVille":"./data/destination/istanbulVille.jpg",
     "srcImgDrapeau":"./data/destination/turquieDrapeau.jpg",
     "ville":"Istanbul",
-    "prix":"1050",
+    "prix":"75",
     "continent":"asie",
     "description":"",
     "temperature":   ""
@@ -76,7 +76,7 @@
     "srcImgVille":"./data/destination/bahreïnVille.jpg",
     "srcImgDrapeau":"./data/destination/BahreïnDrapeau.jpg",
     "ville":"Bahreïn",
-    "prix":"1980",
+    "prix":"87",
     "continent":"asie",
     "description":"",
     "temperature":   ""
@@ -85,7 +85,7 @@
     "srcImgVille":"./data/destination/elroyVille.jpg",
     "srcImgDrapeau":"./data/destination/etatsunisDrapeau.jpg",
     "ville":"Elroy",
-    "prix":"1460",
+    "prix":"118",
     "continent":"ameriqueNord",
     "description":"",
     "temperature":  ""
@@ -94,7 +94,7 @@
     "srcImgVille":"./data/destination/castelletVille.jpg",
     "srcImgDrapeau":"./data/destination/franceDrapeau.jpg",
     "ville":"Castellet",
-    "prix":"350",
+    "prix":"20",
     "continent":"europe",
     "description":"",
     "temperature":  ""
@@ -103,7 +103,7 @@
     "srcImgVille":"./data/destination/johannesbourgVille.jpg",
     "srcImgDrapeau":"./data/destination/afriquesudDrapeau.jpg",
     "ville":"Johannesbourg",
-    "prix":"1860",
+    "prix":"55",
     "continent":"afrique",
     "description":"",
     "temperature":  ""
@@ -112,7 +112,7 @@
     "srcImgVille":"./data/destination/shangaiVille.jpg",
     "srcImgDrapeau":"./data/destination/chineDrapeau.jpg",
     "ville":"Shanghai",
-    "prix":"2845",
+    "prix":"47",
     "continent":"asie",
     "description":"",
     "temperature":  ""
@@ -121,7 +121,7 @@
     "srcImgVille":"./data/destination/nurburgringVille.jpg",
     "srcImgDrapeau":"./data/destination/allemagneDrapeau.jpg",
     "ville":"Nürburg",
-    "prix":"340",
+    "prix":"30",
     "continent":"europe",
     "description":"",
     "temperature":  ""
@@ -130,7 +130,7 @@
     "srcImgVille":"./data/destination/singapourVille.jpg",
     "srcImgDrapeau":"./data/destination/singapourDrapeau.jpg",
     "ville":"Singapour",
-    "prix":"3400",
+    "prix":"76",
     "continent":"asie",
     "description":"",
     "temperature":  ""
@@ -139,7 +139,7 @@
     "srcImgVille":"./data/destination/melbourneVille.jpg",
     "srcImgDrapeau":"./data/destination/australieDrapeau.jpg",
     "ville":"Melbourne",
-    "prix":"3620",
+    "prix":"178",
     "continent":"oceanie",
     "description":"",
     "temperature":  ""
