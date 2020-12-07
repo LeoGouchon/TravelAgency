@@ -1,5 +1,11 @@
+///
+//SCRIPT UTILE POUR LA PAGE PANIER.HTML
+///
+
 var allTravels=[]
 var cart="";
+
+//Fetch qui se lance dès que le js est activé
 fetch('../js/dataVoyage.json')
   .then(function(response){
     return response.json();
@@ -12,6 +18,9 @@ fetch('../js/dataVoyage.json')
     calcPrice();
   })
 
+//
+//
+//Fonction qui cherche le bon voyage d'input à partir de son nom et le return
 function findTravel(allTravels, ville){
   for(var element of allTravels){
     if(element.ville==ville){
@@ -21,12 +30,15 @@ function findTravel(allTravels, ville){
   }
 }
 
-
+//
+//
+//FONCTION QUI CHARGE ET AFFICHE LES VOYAGES QUI SONT DANS LE PANIER
 function loadCart(){
   //console.log("loadCart called")
   cart = JSON.parse(sessionStorage.cart);
   //console.log(cart);
   document.getElementsByClassName('listePanier')[0].innerHTML = '';
+  //affiche chaque voyage du panier dans le code html un par un
   for (var element of cart){
     //console.log(element);
     document.getElementsByClassName("listePanier")[0].innerHTML +=
@@ -64,6 +76,9 @@ function loadCart(){
   }
 }
 
+//
+//
+//FONCTION QUI CALCULE LE PRIX TOTAL DU PANIER
 function calcPrice(){
   cart = JSON.parse(sessionStorage.cart);
   var prixPanier=0;
@@ -73,6 +88,10 @@ function calcPrice(){
   document.getElementsByClassName("prixPanier")[0].innerHTML+=prixPanier;
 }
 
+//
+//
+//FONCTION QUI SUPPRIMER UN VOYAGE DU PANIER
+// +++++++NON FINI ET NON FONCTIONNEL++++++++
 function suprVoyage(ville){
   cart = JSON.parse(sessionStorage.cart);
   for(var i in cart){

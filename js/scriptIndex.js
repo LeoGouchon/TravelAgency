@@ -1,7 +1,12 @@
+///
+// TOUT LES SCRIPTS SONT UTILES POUE LA PAGE INDEX.HTML
+///
+
+
 //
 //
 //
-//S'active quand le js est ouvert
+//S'active quand le js est chargée
 //output : bdd des voyages sous le nom AllTravels et permet d'afficher tout les voyages de la bdd
 fetch("./js/dataVoyage.json")
 .then(function(response){
@@ -17,31 +22,27 @@ fetch("./js/dataVoyage.json")
 
 //
 //
+//
 //TRIE DES VOYAGES
 function applyFilter(){
   //On créé un array qui contient tout les éléments qui correspondent aux choix de l'utilisateur
-  console.log("allTravels");
-  console.log(allTravels);
   var selectTravels = allTravels.slice(); //On copie la bdd entière
-  console.log("selectTravels");
-  console.log(selectTravels);
+
   //1- Regarder le continent choisi dans le tri
   var listContinents = document.getElementsByClassName("continents")[0];
   var selectContinent = listContinents.options[listContinents.selectedIndex].value;
-  console.log(selectContinent);
   del = [];
   if(selectContinent!="tousContinents"){
-    console.log(selectTravels);
     for(travel of selectTravels){
-      console.log(`on regarde `+travel.ville+``);
+      //console.log(`on regarde `+travel.ville+``);
       if(travel.continent!=selectContinent){
-        console.log(`on supprime `+travel.ville+``);
+        //console.log(`on supprime `+travel.ville+``);
         del.includes(selectTravels.indexOf(travel)) ? console.log("a") : del.push(selectTravels.indexOf(travel));
-        }
       }
     }
-    // selectTravels.splice(selectTravels.indexOf(travel),1);
-  console.log(selectTravels);
+  }
+  //console.log(selectTravels);
+
   //2- Regarder le prix le plus bas choisi
   var selectLowPrice = document.getElementsByClassName("lowPrice")[0].value;
   for(travel of allTravels){
@@ -52,12 +53,12 @@ function applyFilter(){
       //console.log(selectTravels);
     }
   }
-  //3- Regarder le prix le plus haut choisi*
+
+  //3- Regarder le prix le plus haut choisi
   var selectHighPrice = document.getElementsByClassName("highPrice")[0].value;
   for(travel of selectTravels){
     //Si le prix est plus élevé que celui dans le l'input de tri, on enlève le voyage
     if(parseInt(travel.prix)>parseInt(selectHighPrice)){
-      console.log("//3");
       del.includes(selectTravels.indexOf(travel)) ? console.log("a") : del.push(selectTravels.indexOf(travel));
       //console.log("trie prix haut");
       //console.log(selectTravels);
@@ -65,22 +66,25 @@ function applyFilter(){
   }
 
 
-  del.sort(function(a, b) {return a - b}).reverse(); //Trie par ordre croissant les index des voyages à supr
-    console.log(del);
+  del.sort(function(a, b) {return a - b}).reverse(); //Trie par ordre croissant les index des voyages à supprimer
+  //console.log(del);
   for (i of del){
     selectTravels.splice(i,1);
   }
   selectTravels.sort(function(a, b) {return parseInt(a.prix) - parseInt(b.prix)}); //Trie les voyages par ordre croissant de prix
+
   //4- Afficher la liste correspondant à tout les critères
   document.getElementsByClassName('sectionArticle')[0].innerHTML ='';
-  console.log(selectTravels);
+  //console.log(selectTravels);
   initialiseVoyage(selectTravels);
 }
 
 //
+//
+//FONCTION APPELE DANS LE FETCH INITIAL
 //output : détermine la température de chaque voyage
 function initialiseVoyage(listTravels){
-  console.log(listTravels);
+  //console.log(listTravels);
   for(travel of listTravels){   //On parcours le fichier json voyage par voyage
     weatherInfo(travel.ville);  //On va chercher la température pour tous les travels de listTravels
     //console.log('fin du for weatherInfo');
@@ -106,6 +110,7 @@ function weatherInfo(ville){
   }
 
   //
+  //
   //Fonction qui affecte la température d'un endroit à sa ville correspondante
   function returnTemp(tempData, ville){
     //On enlève tout les voyages affichés à l'écran
@@ -124,7 +129,7 @@ function weatherInfo(ville){
   //
   //
   //
-  //Affiche le voyage travel
+  //Affiche le voyage travel dans le code HTML
   function afficherVoyage(travel){
     document.getElementsByClassName('sectionArticle')[0].innerHTML +=
     `<div class="voyage">
