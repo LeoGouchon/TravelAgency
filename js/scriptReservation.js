@@ -73,7 +73,7 @@ function daysCalcul(){
 
   if (dateRetour<dateDepart){
     dateEnd.value="";
-    
+
     return
   }
   if (dateDepart<dateJour){
