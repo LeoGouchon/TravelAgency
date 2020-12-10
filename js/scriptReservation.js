@@ -1,16 +1,18 @@
+///
+//SCRIPT UTILE POUR LA PAGE RESERVATION.HTML
+///
+
 //
 //
 //
-//AFFICHAGE DES PARAMETRES DU VOYAGE SUR LEQUEL L'UTILISATEUR A CLIQUE
+//STOCKAGE DES CARACTERISTIQUES DU VOYAGE
 var urlSearch = new URLSearchParams(document.location.search.substring(1)); //définit des méthodes utilitaires pour travailler avec la chaîne de requête de l'URL.
 var ville = urlSearch.get('destination'); //On récupère la valeur du paramètre 'destination'
-//console.log(ville);
 var adultPrice = ""; //Maj avec le fetch et la fonction getPrice
 var childPrice = ""; //Maj avec le fetch et la fonction getPrice
 var prixDejeuner = 12;
 var prixSejour="";
-
-fetch("../js/dataVoyage.json") //On récupère la BDD
+fetch("../js/dataVoyage.json") //On récupère la BDD de tout les voyages
 .then(function(response){
   return response.json() //on convert le fichier au format json
 }).then(function(json){
@@ -23,7 +25,7 @@ fetch("../js/dataVoyage.json") //On récupère la BDD
   //console.log(adultPrice);
 });
 
-
+//On récupère le prix du voyage de "ville" et on le stock
 function getPrice(allTravels, ville){
   for(var travel of allTravels){
     if(ville == travel.ville){
@@ -35,6 +37,7 @@ function getPrice(allTravels, ville){
   }
 }
 
+//Fonction qui affiche sur la page HTML les caractéristiques à afficher sur la page RESERVATION
 function afficherParametreVoyage(allTravels, ville){
   for(var travel of allTravels){
     if(ville == travel.ville){
@@ -108,6 +111,7 @@ function dejeune(checkbox){
   }
 }
 
+//Affiche le prix total de la réservation du voyage
 function prixTotal(){
   /*  document.getElementById("prixSejour").value = prixAdulteDate(getDays()); */
   /*    document.getElementById("prixSejour").innerText = prixAdulteDate(getDays()) + " $"; */

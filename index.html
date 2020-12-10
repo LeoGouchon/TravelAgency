@@ -7,10 +7,16 @@
         <title>FastTravel</title>
     </head>
     <body>
+<<<<<<< HEAD
         <header> <!--Haut de page , création du gros de la page, on intègre la navigation au menu-->
           <h1 class = "nomSite">FastTravel</h1>
+=======
+      <!-- Header commun à toutes les pages -->
+        <header>
+          <h1 class="nomSite">FastTravel</h1>
+>>>>>>> aa39dfe24c4f55365b8a4a9e75ac5a4433c06b8a
           <nav>
-                <a href = "./index.html">   <!--création du navigateur-->
+                <a href = "./index.html">
                     Accueil
                 </a>
                 <a href = "./html/map.html">
@@ -25,8 +31,14 @@
 
                 <a onclick="openCloseForm()" class = "loginButton">Se connecter</a>
             </nav>
+<<<<<<< HEAD
             <div class = "popUpLogin" id="login">
               <form action="javascript:void(0);" class = "loginContainer">
+=======
+            <!--pop-up pour se login au site-->
+            <div class="popUpLogin" id="login">
+              <form action="index.html" class="loginContainer">
+>>>>>>> aa39dfe24c4f55365b8a4a9e75ac5a4433c06b8a
                   <h2>Se connecter</h2>
                   <label for = "entrerEmail">Email</label>
                   <input type = "email" name = "email" id = "emailPopUp" placeholder = "Entrer votre email">
@@ -70,9 +82,15 @@
           </article>
         </section>
 
+<<<<<<< HEAD
         <footer> <!--bas de page-->
               <a class = "logoReseau" href ="./index.html">
                 <img src =  "./data/icon/webSiteLogo.png" alt="Site Web">
+=======
+        <footer> <!--bas de page commun à toutes les pages-->
+              <a class="logoReseau" href ="./index.html">
+                <img src="./data/icon/webSiteLogo.png" alt="Site Web">
+>>>>>>> aa39dfe24c4f55365b8a4a9e75ac5a4433c06b8a
               </a>
               <a class = "logoReseau" href="https://www.instagram.com/fauxLienInstagram/">
                 <img src =  "./data/icon/instagramLogo.png" alt="Instagram">
@@ -84,9 +102,17 @@
                 <img src =  "./data/icon/twitterLogo.png" alt="Twitter">
               </a>
         </footer>
+<<<<<<< HEAD
 
         <button  id="topbutton" onclick="topFunction()"> ^ </button>
         <script src = "./js/script.js"></script>
         <script src = "./js/scriptIndex.js"></script>
+=======
+        <!-- Bouton qui permet de scroll vers le haut de la page-->
+        <button  id="topbutton" onclick="topFunction()"> &#8593 </button>
+        <!--import des scripts-->
+        <script src="./js/script.js"></script>
+        <script src="./js/scriptIndex.js"></script>
+>>>>>>> aa39dfe24c4f55365b8a4a9e75ac5a4433c06b8a
     </body>
 </html>
