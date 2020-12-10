@@ -30,11 +30,11 @@ function applyFilter(){
   var selectContinent = listContinents.options[listContinents.selectedIndex].value;
   console.log(selectContinent);
   del = [];
-  if(selectContinent!="tousContinents"){
+  if(selectContinent != "tousContinents"){
     console.log(selectTravels);
     for(travel of selectTravels){
       console.log(`on regarde `+travel.ville+``);
-      if(travel.continent!=selectContinent){
+      if(travel.continent != selectContinent){
         console.log(`on supprime `+travel.ville+``);
         del.includes(selectTravels.indexOf(travel)) ? console.log("a") : del.push(selectTravels.indexOf(travel));
         }
@@ -46,7 +46,7 @@ function applyFilter(){
   var selectLowPrice = document.getElementsByClassName("lowPrice")[0].value;
   for(travel of allTravels){
     //Si le prix est plus bas que celui dans le l'input de tri, on enlève le voyage
-    if(parseInt(travel.prix)<=parseInt(selectLowPrice)){
+    if(parseInt(travel.prix) <= parseInt(selectLowPrice)){
       del.includes(selectTravels.indexOf(travel)) ? console.log("a") : del.push(selectTravels.indexOf(travel));
       //console.log("trie prix bas");
       //console.log(selectTravels);
@@ -90,7 +90,7 @@ function initialiseVoyage(listTravels){
 //
 //fonction qui utilise l'API OpenWheatherMap pour obtenir la température de chaque destination
 function weatherInfo(ville){
-  var key='32d0bc8abf422135f9c0590d8beaac48';
+  var key = '32d0bc8abf422135f9c0590d8beaac48';
   //console.log(ville);
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=`+ ville +`&units=metric&appid=`+ key)
     .then(function(resp){return resp.json() }) //convert data to json
@@ -112,7 +112,7 @@ function weatherInfo(ville){
     //document.getElementsByClassName('sectionArticle')[0].innerHTML="";
     for(var travel of allTravels){
       if(travel.ville == ville){        //Si le nom de la ville correspond à celui de la ville de la température
-        travel.temperature= String(Math.round(tempData));    //On arrondi pour ne pas avoir de virgule dans la température
+        travel.temperature = String(Math.round(tempData));    //On arrondi pour ne pas avoir de virgule dans la température
         //console.log(ville);
         //console.log(travel.temperature);
         afficherVoyage(travel); //Une fois sa température obtenu, on l'affiche sur la page web
@@ -127,16 +127,16 @@ function weatherInfo(ville){
   //Affiche le voyage travel
   function afficherVoyage(travel){
     document.getElementsByClassName('sectionArticle')[0].innerHTML +=
-    `<div class="voyage">
-    <div class="boite">
-    <div class="contenu" onclick="location.href='./html/reservation.html?destination=`+travel.ville+`'">
-    <div class="photo">
-    <img src="`+travel.srcImgVille+`" alt="">
+    `<div class = "voyage">
+    <div class = "boite">
+    <div class = "contenu" onclick = "location.href='./html/reservation.html?destination=`+travel.ville+`'">
+    <div class = "photo">
+    <img src = "`+travel.srcImgVille+`" alt="">
     </div>
-    <img class="drapeau" src="`+travel.srcImgDrapeau+`" alt="">
+    <img class = "drapeau" src = "`+travel.srcImgDrapeau+`" alt ="">
     <h2>`+travel.ville+`</h2>
-    <a href="./html/reservation.html?destination=`+travel.ville+`">à partir de `+travel.prix+`€</a>
-    <p class="temperature">`+travel.temperature+`°c</p>
+    <a href = "./html/reservation.html?destination=`+travel.ville+`">à partir de `+travel.prix+`€</a>
+    <p class = "temperature">`+travel.temperature+`°c</p>
     </div>
     </div>
     </div>`;

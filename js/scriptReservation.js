@@ -8,7 +8,7 @@ var ville = urlSearch.get('destination'); //On récupère la valeur du paramètr
 var adultPrice = ""; //Maj avec le fetch et la fonction getPrice
 var childPrice = ""; //Maj avec le fetch et la fonction getPrice
 var prixDejeuner = 12;
-var prixSejour="";
+var prixSejour = "";
 
 fetch("../js/dataVoyage.json") //On récupère la BDD
 .then(function(response){
@@ -27,8 +27,8 @@ fetch("../js/dataVoyage.json") //On récupère la BDD
 function getPrice(allTravels, ville){
   for(var travel of allTravels){
     if(ville == travel.ville){
-      adultPrice=travel.prix;
-      childPrice=travel.prix*0.6;
+      adultPrice = travel.prix;
+      childPrice = travel.prix*0.6;
       //console.log("adultPriceUpdated");
       //console.log(adultPrice);
     }
@@ -77,11 +77,11 @@ function daysCalcul(){
     return
   }
   if (dateDepart<dateJour){
-    dateStart.value="";
+    dateStart.value = "";
     return
   }
   if(dateRetour<dateJour){
-    dateEnd.value="";
+    dateEnd.value = "";
     return
   }
   return noError //Si on atteint ce return, le prix rentré par l'utilsateur ne rencontre pas de problème particulier
@@ -112,7 +112,7 @@ function prixTotal(){
   /*  document.getElementById("prixSejour").value = prixAdulteDate(getDays()); */
   /*    document.getElementById("prixSejour").innerText = prixAdulteDate(getDays()) + " $"; */
   $("#prixSejour").text(prixAdulteDate(getDays()) + prixEnfantDate(getDays()) + dejeune(this)); /*utilisation de Jquery pour simplifier l'écriture */
-  prixSejour=prixAdulteDate(getDays()) + prixEnfantDate(getDays()) + dejeune(this);
+  prixSejour = prixAdulteDate(getDays()) + prixEnfantDate(getDays()) + dejeune(this);
 }
 
 //
@@ -121,18 +121,18 @@ function prixTotal(){
 //FONCTION POUR ENREGISTRER LE VOYAGE DANS SESSIONSTORAGE POUR POUVOIR L'AFFICHER DANS LE PANIER
 function sendInfo(){
   var cartSession = sessionStorage.cart; //On créé une sessionStorage qu'on nomme cartSession
-  if(!cartSession || cartSession=='[]'){ //Si cartSession est vide ou inexistante on rajoute [
-    var cart='[';
+  if(!cartSession || cartSession == '[]'){ //Si cartSession est vide ou inexistante on rajoute [
+    var cart = '[';
   }
   else{
     for(var element of JSON.parse(cartSession)){
       console.log(element);
-      if(element.ville==ville){    //Si il existe une réservation dans la même ville, on renvoie juste à la page panier
-        document.location.href="../html/panier.html";
+      if(element.ville == ville){    //Si il existe une réservation dans la même ville, on renvoie juste à la page panier
+        document.location.href = "../html/panier.html";
         return
       }
     }
-    var cart= cartSession.slice(0,-1)+','; //On récupère tout cartSession sauf le dernier caractère (cad "]" qu'on rajoutera plus tard)
+    var cart =  cartSession.slice(0,-1)+','; //On récupère tout cartSession sauf le dernier caractère (cad "]" qu'on rajoutera plus tard)
   }
   cart += JSON.stringify({
     "familyName":document.getElementsByName("familyName")[0].value,
@@ -150,7 +150,7 @@ function sendInfo(){
   })+']'
   sessionStorage.setItem('cart', cart);
   //console.log("sendfInfo Click")
-  document.location.href="../html/panier.html"; //On renvoie l'utilisateur à la page panier
+  document.location.href = "../html/panier.html"; //On renvoie l'utilisateur à la page panier
 }
 
 //

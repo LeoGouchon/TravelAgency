@@ -1,5 +1,5 @@
-var allTravels=[]
-var cart="";
+var allTravels = []
+var cart = "";
 fetch('../js/dataVoyage.json')
   .then(function(response){
     return response.json();
@@ -14,7 +14,7 @@ fetch('../js/dataVoyage.json')
 
 function findTravel(allTravels, ville){
   for(var element of allTravels){
-    if(element.ville==ville){
+    if(element.ville == ville){
       //console.log(ville);
       return element
     }
@@ -66,17 +66,17 @@ function loadCart(){
 
 function calcPrice(){
   cart = JSON.parse(sessionStorage.cart);
-  var prixPanier=0;
+  var prixPanier = 0;
   for(var element of cart){
-    prixPanier+=element.price;
+    prixPanier += element.price;
   }
-  document.getElementsByClassName("prixPanier")[0].innerHTML+=prixPanier;
+  document.getElementsByClassName("prixPanier")[0].innerHTML += prixPanier;
 }
 
 function suprVoyage(ville){
   cart = JSON.parse(sessionStorage.cart);
   for(var i in cart){
-    if(cart[i].ville==ville){
+    if(cart[i].ville == ville){
       console.log(cart[i]);
       cart.splice(i,1);
       sessionStorage.setItem('cart', cart);

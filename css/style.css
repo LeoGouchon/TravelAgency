@@ -98,6 +98,7 @@ nav > a:hover{
   background-color: var(--color-background);
 }
 
+
 .loginContainer{
   background-color: var(--color-background);
   padding: 10px;
@@ -184,7 +185,7 @@ header > form {
   padding: 10px;
 }
 
-header > form input[type=email], header > form input[type=password] {
+header > form input[type = email], header > form input[type = password] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -218,28 +219,28 @@ header > form input[type=email], header > form input[type=password] {
   outline:none;
 }
 
-label[for="contients"]{
+label[for = "contients"]{
   grid-area: 1 / 1 / 2 / 2;
 }
 .continents{
   grid-area: 2 / 1 / 3 / 2;
 }
-label[for="prixMin"]{
+label[for = "prixMin"]{
   grid-area: 1 / 2 / 2 / 3;
 }
-.formTrie>input[name="prixMin"]{
+.formTrie>input[name = "prixMin"]{
   grid-area: 2 / 2 / 3 / 3;
 }
-label[for="prixMax"]{
+label[for = "prixMax"]{
   grid-area: 1 / 3 / 2 / 4;
 }
-.formTrie>input[name="prixMax"]{
+.formTrie>input[name = "prixMax"]{
   grid-area: 2 / 3 / 3 / 4;
 }
-.formTrie>button[type="reset"]{
+.formTrie>button[type = "reset"]{
     grid-area: 2 / 4 / 3 / 5;
 }
-.
+
 
 .formTrie > label{
   margin: 0 var(--margin);
@@ -260,7 +261,7 @@ label[for="prixMax"]{
   min-width: 75px;
 }
 
-button[type="reset"]{
+button[type = "reset"]{
   font-weight: normal;
   border-radius: 20px;
   background: var(--color-button-danger);
@@ -273,7 +274,7 @@ button[type="reset"]{
   transition-duration: var(--transition-time);
 }
 
-button[type="reset"]:hover{
+button[type = "reset"]:hover{
   background: var(--color-button-danger-hover);
 }
 
@@ -563,7 +564,7 @@ button[type="reset"]:hover{
   margin-top: var(--margin);
 }
 
-.reservation>input:not([type="checkbox"]), .reservation>select, .dateReservation>input, .rangePersonne>input, textarea, .prixVoyage{
+.reservation>input:not([type = "checkbox"]), .reservation>select, .dateReservation>input, .rangePersonne>input, textarea, .prixVoyage{
   background-color: var(--color-background-darker);
   color: var(--color-text);
   width: 100%;
@@ -572,7 +573,7 @@ button[type="reset"]:hover{
   padding:16px;
 }
 
-::placeholder, input[type="date"]{
+::placeholder, input[type = "date"]{
   color: var(--color-text);
 }
 
@@ -584,7 +585,7 @@ button[type="reset"]:hover{
   margin-bottom: var(--margin);
 }
 
-input[type="checkbox"]{
+input[type = "checkbox"]{
   width:20px;
   height: 20px;
   vertical-align: middle;
@@ -605,11 +606,11 @@ output{
   font-weight: bold;
 }
 
-label[for="dateStart"], label[for="nbAdulte"]{
+label[for = "dateStart"], label[for = "nbAdulte"]{
   grid-area: 1 / 1 / 2 / 2;
 }
 
-label[for="dateEnd"], label[for="nbEnfant"]{
+label[for = "dateEnd"], label[for = "nbEnfant"]{
   grid-area: 1 / 2 / 2 / 3;
 }
 
