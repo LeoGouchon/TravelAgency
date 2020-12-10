@@ -20,21 +20,16 @@ function closeForm() {
 //
 //FONCTION POUR VERIFIER LES IDENTIFIANTS RENTRER POUR SE CONNECTER A SON COMPTE
 function callLogin() {
-  var login = document.getElementById('emailPopUp');
-  var mdp = document.getElementById('passwordPopUp');
+  var login = document.getElementById('emailPopUp').value;
+  var mdp = document.getElementById('passwordPopUp').value;
   var urlPage = window.location.href;
   //Si on se trouve sur la page index, on modifie légèrement l'url du fichier json
-  if(urlPage.indexOf("index")) {
-    var lienJson = "./js/dataUser.json";
-  }
-  else() {
-    var lienJson = "../js/dataUser.json"
-  }
-  fetch(lienJson)
+  fetch("./js/dataUser.json")
   .then(function(response){
     return response.json() //on convert le fichier au format json
   }).then(function(json){
     allUsers = json; //on renomme la bdd en 'allUsers' qui regroupe tout les identifiant
+    console.log(allUsers);
     checkLogin(login, mdp, allUsers);
   })
   .catch(function(err) {
@@ -44,12 +39,12 @@ function callLogin() {
 
 function checkLogin(login, mdp, allUsers) {
   for (user of allUsers){
-    if (user.identifiant == login && user.identifiant == mdp){
-      window.alert("VOUS ETES BIEN CONNECTE")
-      break
+    if (user.identifiant == login && user.mdp == mdp){
+      window.alert("VOUS ETES BIEN CONNECTE");
+      return
     }
   }
-  window.alert("Mauvais identifiant, veuillez rééssayer")
+  window.alert("Mauvais identifiant, veuillez rééssayer");
 }
 
 //
