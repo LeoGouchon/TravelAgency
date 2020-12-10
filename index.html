@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang =  "fr">
+=======
+<html lang = "fr">
+>>>>>>> 2b27e3856908ad5f15915c80a5c20c957d808027
     <head>
         <link rel = "icon" href = "./data/icon/airplane.png"/>
         <link rel = "stylesheet" href = "./css/style.css">
@@ -7,10 +11,16 @@
         <title>FastTravel</title>
     </head>
     <body>
+<<<<<<< HEAD
         <header> <!--Haut de page , création du gros de la page, on intègre la navigation au menu-->
           <h1 class = "nomSite">FastTravel</h1>
+=======
+      <!-- Header commun à toutes les pages -->
+        <header>
+          <h1 class="nomSite">FastTravel</h1>
+>>>>>>> 2b27e3856908ad5f15915c80a5c20c957d808027
           <nav>
-                <a href = "./index.html">   <!--création du navigateur-->
+                <a href = "./index.html">
                     Accueil
                 </a>
                 <a href = "./html/map.html">
@@ -23,6 +33,7 @@
                     Contact
                 </a>
 
+<<<<<<< HEAD
                 <a onclick = "openCloseForm()" class = "loginButton">Se connecter</a>
             </nav>
             <div class = "popUpLogin" id = "login">
@@ -33,6 +44,18 @@
                   <label for = "password">Mot de passe</label>
                   <input type = "password" name = "password" minlength = "5" required placeholder = "Entrer votre mot de passe">
                   <button type = "submit" class = "button">Login</button>
+=======
+                <a onclick="openCloseForm()" class = "loginButton">Se connecter</a>
+            </nav>
+            <div class = "popUpLogin" id="login">
+              <form action="javascript:void(0);" class = "loginContainer">
+                  <h2>Se connecter</h2>
+                  <label for = "entrerEmail">Email</label>
+                  <input type = "email" name = "email" id = "emailPopUp" placeholder = "Entrer votre email">
+                  <label for = "password">Mot de passe</label>
+                  <input type = "password" name = "password" id = "passwordPopUp" minlength = "5" required placeholder = "Entrer votre mot de passe">
+                  <button type = "submit" class = "button" onclick = "callLogin()">Login</button>
+>>>>>>> 2b27e3856908ad5f15915c80a5c20c957d808027
                   <button type = "submit" class = "buttonCancel" onclick = "closeForm()">Fermer</button>
               </form>
             </div>
@@ -51,9 +74,15 @@
                           <option value = "europe">Europe</option>
                           <option value = "oceanie">Océanie</option>
                       </select>
+<<<<<<< HEAD
                       <label for  = "prixMin">min. </label>
                       <input class = "lowPrice" type = "number" name = "prixMin" value = "0" min = "0" step = "10" onchange = "applyFilter()">
                       <label for  = "prixMax">max. </label>
+=======
+                      <label for ="prixMin">min. </label>
+                      <input class = "lowPrice" type = "number" name = "prixMin" value="0" min="0" step="10" onchange = "applyFilter()">
+                      <label for ="prixMax">max. </label>
+>>>>>>> 2b27e3856908ad5f15915c80a5c20c957d808027
                       <input class = "highPrice" type = "number" name = "prixMax" value = "100" min = "0" step = "10" onchange = "applyFilter()">
                   <div class = "reset">
                       <button class = "reset" type = "reset" onclick = "applyFilter()">Rénitialiser</button>
@@ -71,6 +100,7 @@
         </section>
 
         <footer> <!--bas de page-->
+<<<<<<< HEAD
               <a class = "logoReseau" href  = "./index.html">
                 <img src = "./data/icon/webSiteLogo.png" alt = "Site Web">
               </a>
@@ -88,5 +118,25 @@
         <button  id = "topbutton" onclick = "topFunction()"> &#8593 </button>
         <script src = "./js/script.js"></script>
         <script src = "./js/scriptIndex.js"></script>
+=======
+              <a class = "logoReseau" href ="./index.html">
+                <img src =  "./data/icon/webSiteLogo.png" alt="Site Web">
+              </a>
+              <a class = "logoReseau" href="https://www.instagram.com/fauxLienInstagram/">
+                <img src =  "./data/icon/instagramLogo.png" alt="Instagram">
+              </a>
+              <a class = "logoReseau" href="https://www.facebook.com/fauxLienFacebook">
+                <img src =  "./data/icon/facebookLogo.png" alt="Facebook">
+              </a>
+              <a class = "logoReseau" href="https://twitter.com/fauxLienTwitter">
+                <img src =  "./data/icon/twitterLogo.png" alt="Twitter">
+              </a>
+        </footer>
+        <!-- Bouton qui permet de scroll vers le haut de la page-->
+        <button  id="topbutton" onclick="topFunction()"> &#8593 </button>
+        <!--import des scripts-->
+        <script src="./js/script.js"></script>
+        <script src="./js/scriptIndex.js"></script>
+>>>>>>> 2b27e3856908ad5f15915c80a5c20c957d808027
     </body>
 </html>
