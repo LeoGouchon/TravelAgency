@@ -26,14 +26,14 @@
 
                 <a onclick = "openCloseForm()" class = "loginButton">Se connecter</a>
             </nav>
-            <div class = "popUpLogin" id = "login">
-              <form action = "./index.html" class = "loginContainer">
+            <div class = "popUpLogin" id="login">
+              <form action="javascript:void(0);" class = "loginContainer">
                   <h2>Se connecter</h2>
                   <label for = "entrerEmail">Email</label>
-                  <input type = "email" name = "email" placeholder = "Entrer votre email">
+                  <input type = "email" name = "email" id = "emailPopUp" placeholder = "Entrer votre email">
                   <label for = "password">Mot de passe</label>
-                  <input type = "password" name = "password" minlength = "5" required placeholder = "Entrer votre mot de passe">
-                  <button type = "submit" class = "button">Login</button>
+                  <input type = "password" name = "password" id = "passwordPopUp" minlength = "5" required placeholder = "Entrer votre mot de passe">
+                  <button type = "submit" class = "button" onclick = "callLogin()">Login</button>
                   <button type = "submit" class = "buttonCancel" onclick = "closeForm()">Fermer</button>
               </form>
             </div>

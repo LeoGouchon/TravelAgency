@@ -28,16 +28,17 @@
       </a>
       <a onclick="openCloseForm()" class="loginButton">Se connecter</a>
     </nav>
-    <div class="popUpLogin" id="login">
-      <form action="./index.html" class="loginContainer">
-        <h2>Se connecter</h2>
-        <label for="entrerEmail">Email</label>
-        <input type="email" name="email" placeholder="Entrer votre email">
-        <label for="password">Mot de passe</label>
-        <input type="password" name="password" minlength="5" required placeholder="Entrer votre mot de passe">
-        <button type="submit" class="button">Login</button>
-        <button type="submit" class="buttonCancel" onclick="closeForm()">Fermer</button>
+    <div class = "popUpLogin" id="login">
+      <form action="javascript:void(0);" class = "loginContainer">
+          <h2>Se connecter</h2>
+          <label for = "entrerEmail">Email</label>
+          <input type = "email" name = "email" id = "emailPopUp" placeholder = "Entrer votre email">
+          <label for = "password">Mot de passe</label>
+          <input type = "password" name = "password" id = "passwordPopUp" minlength = "5" required placeholder = "Entrer votre mot de passe">
+          <button type = "submit" class = "button" onclick = "callLogin()">Login</button>
+          <button type = "submit" class = "buttonCancel" onclick = "closeForm()">Fermer</button>
       </form>
+    </div>
     </div>
   </header>
 
@@ -1169,6 +1170,6 @@
     <img src="../data/icon/twitterLogo.png" alt="Twitter">
   </a>
 </footer>
-<script src="./js/script.js"></script>
+<script src = "../js/script.js"></script>
 </body>
 </html>

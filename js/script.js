@@ -28,6 +28,25 @@ function callLogin() {
   var mdp = document.getElementById('passwordPopUp').value;
   var urlPage = window.location.href;
   //Si on se trouve sur la page index, on modifie légèrement l'url du fichier json
+  fetch("../js/dataUser.json")
+  .then(function(response){
+    return response.json() //on convert le fichier au format json
+  }).then(function(json){
+    allUsers = json; //on renomme la bdd en 'allUsers' qui regroupe tout les identifiant
+    console.log(allUsers);
+    checkLogin(login, mdp, allUsers);
+  })
+  .catch(function(err) {
+  console.log('Fetch PopUpLogin problem: ' + err.message);
+  });
+}
+
+//MEME FONCTION MAIS ON CHANGE L'URL DU FETCH CAR INDEX N'EST PAS AU MEME NIVEAU DES REPERTOIRES (on aurait pu faire plus condensé)
+function callLoginIndex() {
+  var login = document.getElementById('emailPopUp').value;
+  var mdp = document.getElementById('passwordPopUp').value;
+  var urlPage = window.location.href;
+  //Si on se trouve sur la page index, on modifie légèrement l'url du fichier json
   fetch("./js/dataUser.json")
   .then(function(response){
     return response.json() //on convert le fichier au format json
