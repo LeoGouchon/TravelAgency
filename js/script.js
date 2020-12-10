@@ -5,13 +5,8 @@
 //
 //
 //
-<<<<<<< HEAD
-//FONCTION POUR OUVRIR ET FERMER LE POP UP POUR SE LOGIN
-function openCloseForm(){
-=======
 //FONCTION POUR OUVRIR ET FERMER LE POP UP POUR SE LOGIN DANS LA BARRE DE NAVIGATION
 function openCloseForm() {
->>>>>>> aa39dfe24c4f55365b8a4a9e75ac5a4433c06b8a
   if (document.getElementById("login").style.display !="block"){
     document.getElementById("login").style.display = "block";
   }
@@ -27,7 +22,6 @@ function closeForm() {
 //
 //
 //
-<<<<<<< HEAD
 //FONCTION POUR VERIFIER LES IDENTIFIANTS RENTRER POUR SE CONNECTER A SON COMPTE
 function callLogin() {
   var login = document.getElementById('emailPopUp').value;
@@ -51,6 +45,7 @@ function checkLogin(login, mdp, allUsers) {
   for (user of allUsers){
     if (user.identifiant == login && user.mdp == mdp){
       window.alert("VOUS ETES BIEN CONNECTE");
+      closeForm();
       return
     }
   }
@@ -61,9 +56,6 @@ function checkLogin(login, mdp, allUsers) {
 //
 //
 //FONCTION POUR LE BOUTON SCROLL
-=======
-//PARTIE BOUTON SCROLL
->>>>>>> aa39dfe24c4f55365b8a4a9e75ac5a4433c06b8a
 var mybutton = document.getElementById("topbutton");
 
 window.onscroll = function() {scrollFunction()};
